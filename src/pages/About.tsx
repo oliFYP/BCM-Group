@@ -8,15 +8,13 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-import team1 from "../assets/1.JPG";
-import team2 from "../assets/2.JPG";
-import team3 from "../assets/3.JPG";
-import team4 from "../assets/4.JPG";
-import team5 from "../assets/5.JPG";
-import team6 from "../assets/6.JPG";
+import team1 from "../assets/1.jpg";
+import team3 from "../assets/3.jpg";
+import team5 from "../assets/5.jpg";
+import team7 from "../assets/7.jpg";
 
 const advantages = [
-  "Plus de 30 ans d'expérience en construction au Québec",
+  "Plus de 12 ans d'expérience en construction au Québec",
   "Équipe de professionnels qualifiés et certifiés (RBQ)",
   "Gestion de projet complète et transparente du début à la fin",
   "Respect rigoureux des normes de sécurité SST",
@@ -50,20 +48,23 @@ const values = [
 const milestones = [
   {
     year: "Fondation",
-    event: "Création de Groupe B.C.M. sur la Rive-Sud de Montréal",
+    event:
+      "Création du Groupe B.C.M. à Saint-Jean-sur-Richelieu, axé sur l'excellence du service résidentiel",
   },
   {
     year: "5 ans",
-    event: "Expansion vers les projets commerciaux et industriels",
+    event:
+      "Virage majeur vers les secteurs commercial et industriel, avec l'obtention de contrats d'envergure sur la Rive-Sud",
   },
   {
     year: "10 ans",
-    event: "Spécialisation en systèmes intérieurs — notre marque de commerce",
+    event:
+      "Consolidation de notre expertise en systèmes intérieurs et déploiement d'équipes spécialisées en gypse et colombage",
   },
-  { year: "20 ans", event: "Plus de 300 projets livrés avec succès" },
+
   {
     year: "Aujourd'hui",
-    event: "500+ projets, 50+ experts, toujours en croissance",
+    event: "500+ projets, 20+ experts, toujours en croissance",
   },
 ];
 
@@ -85,7 +86,7 @@ export default function About() {
           </h1>
           <p className="text-bcm-silver text-lg max-w-xl leading-relaxed font-light">
             Entrepreneur général spécialisé en systèmes intérieurs depuis plus
-            de 30 ans, enraciné sur la Rive-Sud de Montréal.
+            de 12 ans, enraciné sur la Rive-Sud de Montréal.
           </p>
         </div>
       </div>
@@ -137,7 +138,7 @@ export default function About() {
             <div className="space-y-6">
               <div className="relative overflow-hidden border border-white/5">
                 <img
-                  src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=900"
+                  src={team7}
                   alt="Chantier Groupe B.C.M."
                   className="w-full h-72 object-cover opacity-80"
                 />
@@ -184,29 +185,35 @@ export default function About() {
       </section>
 
       {/* ─── TEAM ─────────────────────────────────────────────── */}
-      <section className="section-pad bg-bcm-coal">
+      <section className="section-pad bg-[#111111] border-t border-white/[0.06]">
         <div className="container-xl">
-          <div className="mb-12">
-            <span className="label mb-5">Les gens derrière BCM</span>
-            <div className="red-bar mb-4" />
-            <h2 className="section-heading">Notre Équipe</h2>
+          <div className="flex items-center gap-3 mb-8">
+            <span className="w-6 h-px bg-[#c8161d]" />
+            <span className="text-[10px] tracking-[0.2em] uppercase text-white/30 font-['DM_Mono',_monospace]">
+              Les gens derrière BCM
+            </span>
           </div>
+          <h2
+            className="text-4xl md:text-5xl font-light text-white mb-14 font-['Barlow_Condensed']"
+            style={{ letterSpacing: "-0.02em" }}
+          >
+            Notre Équipe
+          </h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-px bg-white/5">
+          <div className="grid md:grid-cols-3 gap-4">
             {team.map(({ img }, i) => (
               <div
                 key={i}
-                className="group relative overflow-hidden bg-bcm-coal hover:bg-bcm-mid transition-colors"
+                className="group relative overflow-hidden"
+                style={{ aspectRatio: "3/4" }}
               >
-                <div className="absolute top-0 left-0 right-0 h-[2px] bg-bcm-red scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left z-10" />
-                <div className="relative overflow-hidden h-64">
-                  <img
-                    src={img}
-                    alt={`Membre de l'équipe ${i + 1}`}
-                    className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-bcm-dark/80 via-bcm-dark/10 to-transparent" />
-                </div>
+                <img
+                  src={img}
+                  alt={`Membre ${i + 1}`}
+                  className="w-full h-full object-cover object-top opacity-60 group-hover:opacity-80 group-hover:scale-[1.03] transition-all duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#c8161d] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
               </div>
             ))}
           </div>

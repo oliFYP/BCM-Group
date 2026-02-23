@@ -1,31 +1,31 @@
-import { CheckCircle2, Award, Shield, Clock } from 'lucide-react';
+import { CheckCircle2, Award, Shield, Clock } from "lucide-react";
 
 const About = () => {
   const values = [
     {
       icon: Award,
-      title: 'Excellence',
-      description: 'Des standards de qualité élevés dans chaque projet',
+      title: "Excellence",
+      description: "Des standards de qualité élevés dans chaque projet",
     },
     {
       icon: Shield,
-      title: 'Fiabilité',
-      description: 'Un partenaire de confiance pour vos projets',
+      title: "Fiabilité",
+      description: "Un partenaire de confiance pour vos projets",
     },
     {
       icon: Clock,
-      title: 'Ponctualité',
-      description: 'Respect des délais et des engagements',
+      title: "Ponctualité",
+      description: "Respect des délais et des engagements",
     },
   ];
 
   const advantages = [
-    'Plus de 30 ans d\'expérience en construction',
-    'Équipe de professionnels qualifiés et certifiés',
-    'Gestion de projet complète et transparente',
-    'Respect rigoureux des normes de sécurité',
-    'Utilisation de matériaux de qualité supérieure',
-    'Service après-vente et garanties complètes',
+    "Plus de 12 ans d'expérience en construction",
+    "Équipe de professionnels qualifiés et certifiés",
+    "Gestion de projet complète et transparente",
+    "Respect rigoureux des normes de sécurité",
+    "Utilisation de matériaux de qualité supérieure",
+    "Service après-vente et garanties complètes",
   ];
 
   return (
@@ -39,22 +39,27 @@ const About = () => {
             <div className="w-24 h-1 bg-blue-500 mb-8" />
 
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              Depuis plus de trois décennies, Groupe B.C.M. s'est imposé comme un leader
-              dans le domaine de la construction générale au Québec. Notre engagement envers
-              l'excellence et la satisfaction client guide chacun de nos projets.
+              Depuis plus de trois décennies, Groupe B.C.M. s'est imposé comme
+              un leader dans le domaine de la construction générale au Québec.
+              Notre engagement envers l'excellence et la satisfaction client
+              guide chacun de nos projets.
             </p>
 
             <p className="text-lg text-gray-300 leading-relaxed mb-8">
-              Nous offrons une gamme complète de services, de la construction commerciale
-              à la rénovation, en passant par la gestion de projet et les systèmes intérieurs.
-              Notre équipe de professionnels qualifiés travaille avec passion pour transformer
-              vos visions en réalité.
+              Nous offrons une gamme complète de services, de la construction
+              commerciale à la rénovation, en passant par la gestion de projet
+              et les systèmes intérieurs. Notre équipe de professionnels
+              qualifiés travaille avec passion pour transformer vos visions en
+              réalité.
             </p>
 
             <div className="space-y-3 mb-8">
               {advantages.map((advantage, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <CheckCircle2 className="text-blue-500 flex-shrink-0 mt-1" size={20} />
+                  <CheckCircle2
+                    className="text-blue-500 flex-shrink-0 mt-1"
+                    size={20}
+                  />
                   <span className="text-gray-300">{advantage}</span>
                 </div>
               ))}

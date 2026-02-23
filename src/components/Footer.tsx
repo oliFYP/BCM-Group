@@ -69,7 +69,7 @@ export default function Footer() {
             />
             <p className="text-bcm-silver text-sm leading-relaxed mb-6 max-w-xs">
               Entrepreneur général spécialisé en systèmes intérieurs depuis plus
-              de 30 ans. Excellence, fiabilité et innovation à chaque projet.
+              de 12 ans. Excellence, fiabilité et innovation à chaque projet.
             </p>
             <div className="space-y-3">
               {[

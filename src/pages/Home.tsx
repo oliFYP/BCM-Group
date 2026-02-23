@@ -17,10 +17,10 @@ import logoResidence from "../assets/experience/residence.png";
 import logoStjean from "../assets/experience/stjean.png";
 
 const stats = [
-  { val: "30+", lbl: "Ans d'expérience" },
+  { val: "12+", lbl: "Ans d'expérience" },
   { val: "500+", lbl: "Projets réalisés" },
   { val: "100%", lbl: "Satisfaction client" },
-  { val: "50+", lbl: "Experts qualifiés" },
+  { val: "20+", lbl: "Experts qualifiés" },
 ];
 
 const services = [
@@ -129,7 +129,7 @@ export default function Home() {
               <br />
               <span className="text-bcm-red">l'Excellence</span>
               <br />
-              depuis 30&nbsp;ans
+              depuis 12&nbsp;ans
             </h1>
 
             <p className="text-bcm-silver text-lg md:text-xl leading-relaxed max-w-xl mb-10 font-light">
@@ -219,7 +219,7 @@ export default function Home() {
               <p className="text-bcm-silver leading-relaxed mb-6">
                 Établis sur la Rive-Sud de Montréal, à Saint-Jean-sur-Richelieu,
                 nous planifions, gérons et exécutons vos projets de construction
-                de A à Z. Notre équipe de spécialistes combine plus de 30 ans
+                de A à Z. Notre équipe de spécialistes combine plus de 12 ans
                 d'expertise avec une approche résolument moderne et innovante.
               </p>
               <Link to="/about" className="btn-ghost-red">

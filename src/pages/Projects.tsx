@@ -83,8 +83,8 @@ export default function Projects() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/5">
             {[
               { val: "500+", lbl: "Projets complétés" },
-              { val: "$2B+", lbl: "Valeur de construction" },
-              { val: "30 ans", lbl: "D'expertise" },
+              { val: "$20M+", lbl: "Valeur de construction" },
+              { val: "12 ans", lbl: "D'expertise" },
               { val: "100%", lbl: "Taux de conformité" },
             ].map(({ val, lbl }) => (
               <div
