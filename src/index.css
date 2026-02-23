@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Base ──────────────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    font-family: "Barlow", sans-serif;
+    background: #0d0d0d;
+    color: #f2f2f2;
+  }
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0d0d0d;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #c8161d;
+    border-radius: 2px;
+  }
+}
+
+/* ─── Components ────────────────────────────────────────────── */
+@layer components {
+  /* Typography */
+  .label {
+    @apply text-[10px] font-bold tracking-[0.25em] uppercase text-bcm-red flex items-center gap-2;
+    font-family: "Barlow Condensed", sans-serif;
+  }
+  /* ─── Custom Utilities ────────────────────────────────────── */
+  @layer utilities {
+    .bg-bcm-red {
+      background-color: #c8161d;
+    }
+    .bg-bcm-red-dk {
+      background-color: #9e1015;
+    }
+    .border-bcm-red {
+      border-color: #c8161d;
+    }
+    .border-bcm-red\/40 {
+      border-color: rgba(200, 22, 29, 0.4);
+    }
+    .hover\:bg-bcm-red-dk:hover {
+      background-color: #9e1015;
+    }
+    .hover\:bg-bcm-red\/10:hover {
+      background-color: rgba(200, 22, 29, 0.1);
+    }
+    .focus\:ring-bcm-red\/50:focus {
+      box-shadow: 0 0 0 2px rgba(200, 22, 29, 0.5);
+    }
+    .hover\:shadow-bcm-red\/30:hover {
+      box-shadow: 0 4px 20px 0 rgba(200, 22, 29, 0.3);
+    }
+    .text-bcm-red {
+      color: #c8161d;
+    }
+  }
+
+  .page-title {
+    @apply font-black text-5xl md:text-6xl lg:text-7xl uppercase leading-[0.9] tracking-tight text-white;
+    font-family: "Barlow Condensed", sans-serif;
+  }
+
+  .section-heading {
+    @apply font-bold text-4xl md:text-5xl uppercase tracking-wide leading-tight text-white;
+    font-family: "Barlow Condensed", sans-serif;
+  }
+
+  /* Buttons */
+  .btn-red {
+    @apply inline-flex items-center gap-2.5 bg-bcm-red hover:bg-bcm-red-dk text-white
+           font-bold text-[11px] tracking-[0.2em] uppercase
+           px-7 py-3.5 transition-all duration-200
+           hover:-translate-y-px hover:shadow-lg hover:shadow-bcm-red/30
+           focus:outline-none focus:ring-2 focus:ring-bcm-red/50;
+    font-family: "Barlow Condensed", sans-serif;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2.5 border border-white/25 hover:border-white/70
+           text-white/70 hover:text-white font-bold text-[11px] tracking-[0.2em] uppercase
+           px-7 py-3.5 transition-all duration-200;
+    font-family: "Barlow Condensed", sans-serif;
+  }
+
+  .btn-ghost-red {
+    @apply inline-flex items-center gap-2.5 border border-bcm-red/40 hover:border-bcm-red
+           text-bcm-silver hover:text-white font-bold text-[11px] tracking-[0.2em] uppercase
+           px-7 py-3.5 transition-all duration-200 hover:bg-bcm-red/10;
+    font-family: "Barlow Condensed", sans-serif;
+  }
+
+  /* Cards */
+  .card-dark {
+    @apply bg-bcm-coal border border-white/5 hover:border-bcm-red/30
+           transition-all duration-300 relative overflow-hidden;
+  }
+
+  /* Forms */
+  .form-input {
+    @apply w-full bg-bcm-mid border border-bcm-steel focus:border-bcm-red
+           text-white placeholder-bcm-muted px-4 py-3 text-sm
+           outline-none transition-colors duration-200;
+    font-family: "Barlow", sans-serif;
+  }
+
+  .form-label {
+    @apply block text-[10px] font-bold tracking-[0.2em] uppercase text-bcm-muted mb-2;
+    font-family: "Barlow Condensed", sans-serif;
+  }
+
+  /* Utilities */
+  .red-bar {
+    @apply w-12 h-[2px] bg-bcm-red;
+  }
+  .section-pad {
+    @apply py-24 lg:py-32;
+  }
+  .container-xl {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Page hero */
+  .page-hero {
+    @apply relative pt-36 pb-20 bg-bcm-coal overflow-hidden;
+  }
+
+  .page-hero-glow {
+    @apply absolute -top-40 -right-40 w-[500px] h-[500px] bg-bcm-red/10 rounded-full blur-[100px] pointer-events-none;
+  }
+}
+
+/* ─── Plain CSS (pseudo-elements + background-image) ────────── */
+
+/* .label left-line — can't use @apply on ::before */
+.label::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 1px;
+  background-color: #c8161d;
+  flex-shrink: 0;
+}
+
+/* Page-hero grid texture */
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.06;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 1) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
