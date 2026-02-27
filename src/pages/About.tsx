@@ -14,7 +14,7 @@ import team5 from "../assets/5.jpg";
 import team7 from "../assets/7.jpg";
 
 const advantages = [
-  "Plus de 12 ans d'expérience en construction au Québec",
+  "Plus de 10 ans d'expérience en construction au Québec",
   "Équipe de professionnels qualifiés et certifiés (RBQ)",
   "Gestion de projet complète et transparente du début à la fin",
   "Respect rigoureux des normes de sécurité SST",
@@ -54,7 +54,7 @@ const milestones = [
   {
     year: "5 ans",
     event:
-      "Virage majeur vers les secteurs commercial et industriel, avec l'obtention de contrats d'envergure sur la Rive-Sud",
+      "Virage majeur vers les secteurs commercial et industriel, avec l'obtention de contrats innovants sur la Rive-Sud",
   },
   {
     year: "10 ans",
@@ -64,11 +64,9 @@ const milestones = [
 
   {
     year: "Aujourd'hui",
-    event: "500+ projets, 20+ experts, toujours en croissance",
+    event: "Toujours en croissance",
   },
 ];
-
-const team = [{ img: team1 }, { img: team3 }, { img: team5 }];
 
 export default function About() {
   return (
@@ -86,7 +84,7 @@ export default function About() {
           </h1>
           <p className="text-bcm-silver text-lg max-w-xl leading-relaxed font-light">
             Entrepreneur général spécialisé en systèmes intérieurs depuis plus
-            de 12 ans, enraciné sur la Rive-Sud de Montréal.
+            de 10 ans, enraciné sur la Rive-Sud de Montréal.
           </p>
         </div>
       </div>
@@ -100,11 +98,11 @@ export default function About() {
               <div className="red-bar mb-6" />
               <h2 className="section-heading mb-6">Qui nous sommes</h2>
               <p className="text-bcm-silver leading-relaxed mb-5">
-                Établis sur la Rive-Sud de Montréal, dans la région de
-                Saint-Jean-sur-Richelieu, Groupe B.C.M. s'est imposé comme un
-                acteur de confiance dans l'industrie de la construction générale
-                au Québec. Notre vision a pris forme au fil des années grâce à
-                une équipe de spécialistes unis par des relations solides et une
+                Situé sur la Rive-Sud de Montréal, dans la région de
+                Saint-Jean-sur-Richelieu, Groupe B.C.M. s'est établi comme un
+                acteur de confiance dans l'industrie de la construction au
+                Québec. Notre vision a pris forme au fil des années grâce à une
+                équipe de spécialistes unis par des relations solides et une
                 passion commune pour l'excellence.
               </p>
               <p className="text-bcm-silver leading-relaxed mb-8">
@@ -149,7 +147,7 @@ export default function About() {
                       Saint-Jean-sur-Richelieu, QC
                     </p>
                     <p className="text-bcm-silver text-xs mt-1 font-['Barlow_Condensed'] tracking-wider">
-                      604 Rue Rhéaume, J3B 1B3
+                      Rive-Sud de Montréal
                     </p>
                   </div>
                 </div>
@@ -180,42 +178,6 @@ export default function About() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── TEAM ─────────────────────────────────────────────── */}
-      <section className="section-pad bg-[#111111] border-t border-white/[0.06]">
-        <div className="container-xl">
-          <div className="flex items-center gap-3 mb-8">
-            <span className="w-6 h-px bg-[#c8161d]" />
-            <span className="text-[10px] tracking-[0.2em] uppercase text-white/30 font-['DM_Mono',_monospace]">
-              Les gens derrière BCM
-            </span>
-          </div>
-          <h2
-            className="text-4xl md:text-5xl font-light text-white mb-14 font-['Barlow_Condensed']"
-            style={{ letterSpacing: "-0.02em" }}
-          >
-            Notre Équipe
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-4">
-            {team.map(({ img }, i) => (
-              <div
-                key={i}
-                className="group relative overflow-hidden"
-                style={{ aspectRatio: "3/4" }}
-              >
-                <img
-                  src={img}
-                  alt={`Membre ${i + 1}`}
-                  className="w-full h-full object-cover object-top opacity-60 group-hover:opacity-80 group-hover:scale-[1.03] transition-all duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#c8161d] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-              </div>
-            ))}
           </div>
         </div>
       </section>

@@ -17,12 +17,14 @@ import logoResidence from "../assets/experience/residence.png";
 import logoStjean from "../assets/experience/stjean.png";
 
 const stats = [
-  { val: "12+", lbl: "Ans d'expérience" },
+  { val: "10+", lbl: "Ans d'expérience" },
   { val: "500+", lbl: "Projets réalisés" },
   { val: "100%", lbl: "Satisfaction client" },
   { val: "20+", lbl: "Experts qualifiés" },
 ];
-
+{
+  /* Add the other services */
+}
 const services = [
   {
     num: "01",
@@ -36,8 +38,8 @@ const services = [
   },
   {
     num: "03",
-    title: "Charpente & Colombage",
-    desc: "Structures bois et métalliques pour tous types de projets commerciaux et industriels.",
+    title: "Colombage métallique",
+    desc: "Structures métalliques pour tous types de projets commerciaux et industriels.",
   },
   {
     num: "04",
@@ -93,6 +95,7 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center overflow-hidden bg-bcm-dark">
         {/* Video Background */}
         <div className="absolute inset-0">
+          {/* remove hand and wires */}
           <video
             className="w-full h-full object-cover opacity-60"
             src={bcmVideo}
@@ -129,7 +132,7 @@ export default function Home() {
               <br />
               <span className="text-bcm-red">l'Excellence</span>
               <br />
-              depuis 12&nbsp;ans
+              depuis 10&nbsp;ans
             </h1>
 
             <p className="text-bcm-silver text-lg md:text-xl leading-relaxed max-w-xl mb-10 font-light">
@@ -150,7 +153,7 @@ export default function Home() {
           </div>
 
           {/* Stats */}
-          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-px bg-white/5 border border-white/5">
+          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-px bg-white/5 border border-white/5 mb-6 md:mb-0">
             {stats.map(({ val, lbl }) => (
               <div
                 key={lbl}
@@ -219,7 +222,7 @@ export default function Home() {
               <p className="text-bcm-silver leading-relaxed mb-6">
                 Établis sur la Rive-Sud de Montréal, à Saint-Jean-sur-Richelieu,
                 nous planifions, gérons et exécutons vos projets de construction
-                de A à Z. Notre équipe de spécialistes combine plus de 12 ans
+                de A à Z. Notre équipe de spécialistes combine plus de 10 ans
                 d'expertise avec une approche résolument moderne et innovante.
               </p>
               <Link to="/about" className="btn-ghost-red">

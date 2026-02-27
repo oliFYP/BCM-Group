@@ -5,7 +5,7 @@ const contactCards = [
   {
     Icon: MapPin,
     title: 'Adresse',
-    lines: ['604 Rue Rhéaume', 'Saint-Jean-sur-Richelieu, QC J3B 1B3'],
+    lines: ['Rive-Sud de Montréal'],
     href: 'https://maps.google.com/?q=604+Rue+Rhéaume,+Saint-Jean-sur-Richelieu,+QC',
     linkLabel: 'Voir sur la carte',
   },
@@ -202,7 +202,7 @@ export default function Contact() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Groupe BCM — 604 Rue Rhéaume, Saint-Jean-sur-Richelieu"
+                  title="Groupe BCM — Rive-Sud de Montréal"
                 />
               </div>
 

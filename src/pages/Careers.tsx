@@ -3,14 +3,6 @@ import { ArrowRight, Phone, Mail, CheckCircle2 } from "lucide-react";
 
 const positions = [
   {
-    title: "Gestion de projet",
-    desc: "Planification, coordination et supervision de chantiers commerciaux et industriels.",
-  },
-  {
-    title: "Estimation",
-    desc: "Analyse des plans, préparation de soumissions et évaluation des coûts de construction.",
-  },
-  {
     title: "Poseur de système intérieur",
     desc: "Installation de gypse, cloisons, plafonds suspendus et systèmes intérieurs.",
   },
@@ -106,10 +98,7 @@ export default function Careers() {
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 <div className="border-l-4 border-bcm-red pl-4">
                   <p className="font-['Barlow_Condensed'] font-bold text-white text-lg uppercase tracking-wide leading-tight">
-                    Saint-Jean-sur-Richelieu, QC
-                  </p>
-                  <p className="text-bcm-silver text-xs mt-1 font-['Barlow_Condensed'] tracking-wider">
-                    Rive-Sud de Montréal
+                    Grand-Montréal, QC
                   </p>
                 </div>
               </div>

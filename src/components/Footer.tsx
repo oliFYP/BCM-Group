@@ -1,13 +1,5 @@
 import { Link } from "react-router-dom";
-import {
-  MapPin,
-  Phone,
-  Mail,
-  Facebook,
-  Linkedin,
-  Instagram,
-  ArrowRight,
-} from "lucide-react";
+import { MapPin, Phone, Mail, Facebook, ArrowRight } from "lucide-react";
 import bcmLogo from "../assets/BCM_New.png";
 
 const serviceLinks = [
@@ -69,13 +61,13 @@ export default function Footer() {
             />
             <p className="text-bcm-silver text-sm leading-relaxed mb-6 max-w-xs">
               Entrepreneur général spécialisé en systèmes intérieurs depuis plus
-              de 12 ans. Excellence, fiabilité et innovation à chaque projet.
+              de 10 ans. Excellence, fiabilité et innovation à chaque projet.
             </p>
             <div className="space-y-3">
               {[
                 {
                   Icon: MapPin,
-                  text: "604 Rue Rhéaume, Saint-Jean-sur-Richelieu, QC J3B 1B3",
+                  text: "Rive-Sud de Montréal",
                   href: null,
                 },
                 { Icon: Phone, text: "450-741-1351", href: "tel:450-741-1351" },
@@ -153,12 +145,7 @@ export default function Footer() {
               Certifications
             </h4>
             <div className="space-y-2">
-              {[
-                "Licence RBQ",
-                "CCQ Certifié",
-                "SST Conforme",
-                "ISO Qualité",
-              ].map((cert) => (
+              {["Licence RBQ", "CCQ Certifié", "SST Conforme"].map((cert) => (
                 <div key={cert} className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-bcm-red rounded-full flex-shrink-0" />
                   <span className="text-bcm-silver text-xs">{cert}</span>
@@ -171,20 +158,15 @@ export default function Footer() {
                 Suivez-nous
               </p>
               <div className="flex gap-2">
-                {[
-                  { Icon: Facebook, label: "Facebook" },
-                  { Icon: Linkedin, label: "LinkedIn" },
-                  { Icon: Instagram, label: "Instagram" },
-                ].map(({ Icon, label }) => (
-                  <a
-                    key={label}
-                    href="#"
-                    aria-label={label}
-                    className="w-9 h-9 bg-bcm-steel/50 hover:bg-bcm-red border border-white/5 hover:border-bcm-red flex items-center justify-center transition-all duration-200"
-                  >
-                    <Icon size={14} className="text-white" />
-                  </a>
-                ))}
+                <a
+                  href="https://www.facebook.com/groupebcm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  className="w-9 h-9 bg-bcm-steel/50 hover:bg-bcm-red border border-white/5 hover:border-bcm-red flex items-center justify-center transition-all duration-200"
+                >
+                  <Facebook size={14} className="text-white" />
+                </a>
               </div>
             </div>
           </div>

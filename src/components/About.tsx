@@ -20,7 +20,7 @@ const About = () => {
   ];
 
   const advantages = [
-    "Plus de 12 ans d'expérience en construction",
+    "Plus de 10 ans d'expérience en construction",
     "Équipe de professionnels qualifiés et certifiés",
     "Gestion de projet complète et transparente",
     "Respect rigoureux des normes de sécurité",

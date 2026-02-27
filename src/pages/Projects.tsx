@@ -84,7 +84,7 @@ export default function Projects() {
             {[
               { val: "500+", lbl: "Projets complétés" },
               { val: "$20M+", lbl: "Valeur de construction" },
-              { val: "12 ans", lbl: "D'expertise" },
+              { val: "10 ans", lbl: "D'expertise" },
               { val: "100%", lbl: "Taux de conformité" },
             ].map(({ val, lbl }) => (
               <div

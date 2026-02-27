@@ -1,4 +1,13 @@
 import { Link } from "react-router-dom";
+import team3 from "../assets/3.JPG";
+import accoustic from "../assets/accoustic.JPG";
+import gypse from "../assets/gypse.JPG";
+import platre from "../assets/platre.JPG";
+import plafond from "../assets/plafond.JPG";
+import colombage from "../assets/colombage.JPG";
+import gestion from "../assets/gestion.JPG";
+import isolation from "../assets/isolation.JPG";
+
 import {
   ClipboardList,
   Layers,
@@ -14,64 +23,16 @@ import {
 
 const services = [
   {
-    Icon: ClipboardList,
-    title: "Gestion de projet",
-    desc: "Planification, coordination et suivi rigoureux de vos chantiers du début à la fin. Votre interlocuteur unique qui gère chaque détail pour vous.",
-    features: [
-      "Planification et échéancier",
-      "Coordination des sous-traitants",
-      "Contrôle budgétaire",
-      "Rapports d'avancement",
-    ],
-    img: "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=600",
-  },
-  {
-    Icon: Layers,
-    title: "Pose de gypse",
-    desc: "Installation professionnelle de panneaux de gypse pour cloisons et plafonds, avec finitions soignées adaptées aux exigences commerciales et industrielles.",
-    features: [
-      "Cloisons intérieures",
-      "Plafonds plats et en pente",
-      "Murs courbes",
-      "Finition prête à peindre",
-    ],
-    img: "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=600",
-  },
-  {
-    Icon: Hammer,
-    title: "Charpente",
-    desc: "Conception et installation de structures de charpente bois et acier pour tous types de projets résidentiels, commerciaux et industriels.",
-    features: [
-      "Charpente bois",
-      "Structure acier légère",
-      "Murs porteurs",
-      "Toiture et plancher",
-    ],
-    img: "https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=600",
-  },
-  {
-    Icon: PaintBucket,
-    title: "Plâtre",
-    desc: "Application de plâtre traditionnel et contemporain pour des surfaces durables et esthétiques. Expertise reconnue sur chantiers commerciaux et institutionnels.",
-    features: [
-      "Plâtre traditionnel",
-      "Enduits spéciaux",
-      "Réparations et raccords",
-      "Finitions texturées",
-    ],
-    img: "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=600",
-  },
-  {
     Icon: Grid3x3,
     title: "Colombage métallique",
-    desc: "Fabrication et installation de systèmes de colombage métallique pour cloisons intérieures et façades, offrant résistance, précision et rapidité d'exécution.",
+    desc: "Installation de systèmes de colombage métallique pour cloisons intérieures et murs extérieurs, offrant résistance, précision et rapidité d'exécution.",
     features: [
       "Cloisons non porteuses",
       "Murs extérieurs",
       "Structures complexes",
       "Conformité aux normes",
     ],
-    img: "https://images.pexels.com/photos/4393021/pexels-photo-4393021.jpeg?auto=compress&cs=tinysrgb&w=600",
+    img: colombage,
   },
   {
     Icon: Waves,
@@ -83,7 +44,32 @@ const services = [
       "Pare-vapeur",
       "Certification énergétique",
     ],
-    img: "https://images.pexels.com/photos/3851254/pexels-photo-3851254.jpeg?auto=compress&cs=tinysrgb&w=600",
+    img: isolation,
+  },
+  {
+    Icon: Layers,
+    title: "Pose de gypse",
+    desc: "Installation professionnelle de panneaux de gypse pour cloisons et plafonds, avec finitions soignées adaptées aux exigences commerciales et industrielles.",
+    features: [
+      "Cloisons intérieures",
+      "Plafonds plats et en pente",
+      "Murs courbes",
+      "Finition prête à peindre",
+    ],
+    img: gypse,
+  },
+
+  {
+    Icon: PaintBucket,
+    title: "Plâtre",
+    desc: "Application de plâtre traditionnel et contemporain pour des surfaces durables et esthétiques. Expertise reconnue sur chantiers commerciaux et institutionnels.",
+    features: [
+      "Plâtre traditionnel",
+      "Enduits spéciaux",
+      "Réparations et raccords",
+      "Finitions texturées",
+    ],
+    img: platre,
   },
   {
     Icon: LayoutGrid,
@@ -95,8 +81,34 @@ const services = [
       "Plafonds spéciaux",
       "Intégration mécanique",
     ],
-    img: "https://images.pexels.com/photos/380768/pexels-photo-380768.jpeg?auto=compress&cs=tinysrgb&w=600",
+    img: plafond,
   },
+  {
+    Icon: Hammer,
+    title: "Traitement acoustique",
+    desc: "Conception et installation de solutions acoustiques pour améliorer le confort sonore dans vos espaces résidentiels, commerciaux et industriels.",
+    features: [
+      "Panneaux acoustiques",
+      "Plafond metallique",
+      "Plafond de bois",
+      "Solutions sur mesure",
+    ],
+    img: accoustic,
+  },
+
+  {
+    Icon: ClipboardList,
+    title: "Gestion de projet",
+    desc: "Planification, coordination et suivi rigoureux de vos chantiers du début à la fin. Votre interlocuteur unique qui gère chaque détail pour vous.",
+    features: [
+      "Planification et échéancier",
+      "Coordination des sous-traitants",
+      "Contrôle budgétaire",
+      "Rapports d'avancement",
+    ],
+    img: gestion,
+  },
+
   {
     Icon: Users,
     title: "Location de main-d'œuvre",
@@ -107,7 +119,7 @@ const services = [
       "Superviseurs disponibles",
       "Toutes spécialités",
     ],
-    img: "https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=600",
+    img: team3,
   },
 ];
 
