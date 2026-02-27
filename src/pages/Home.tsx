@@ -18,9 +18,8 @@ import logoStjean from "../assets/experience/stjean.png";
 
 const stats = [
   { val: "10+", lbl: "Ans d'expérience" },
-  { val: "500+", lbl: "Projets réalisés" },
+
   { val: "100%", lbl: "Satisfaction client" },
-  { val: "20+", lbl: "Experts qualifiés" },
 ];
 {
   /* Add the other services */
@@ -153,7 +152,7 @@ export default function Home() {
           </div>
 
           {/* Stats */}
-          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-px bg-white/5 border border-white/5 mb-6 md:mb-0">
+          <div className="mt-20 grid grid-cols-2 md:grid-cols-2 gap-px bg-white/5 border border-white/5 mb-6 md:mb-10">
             {stats.map(({ val, lbl }) => (
               <div
                 key={lbl}
