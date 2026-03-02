@@ -16,54 +16,11 @@ import logoKirmina from "../assets/experience/kirmina.png";
 import logoResidence from "../assets/experience/residence.png";
 import logoStjean from "../assets/experience/stjean.png";
 
-const stats = [
-  { val: "10+", lbl: "Ans d'expérience" },
+import imgVieuxDuluth from "../assets/projects/vieuxduluth.jpg";
+import imgHup from "../assets/projects/hup.jpg";
+import imgAab from "../assets/projects/abb.jpg";
 
-  { val: "100%", lbl: "Satisfaction client" },
-];
-{
-  /* Add the other services */
-}
-const services = [
-  {
-    num: "01",
-    title: "Gestion de projet",
-    desc: "Planification, coordination et suivi rigoureux de vos chantiers du début à la fin.",
-  },
-  {
-    num: "02",
-    title: "Pose de gypse & Plâtre",
-    desc: "Installation professionnelle de gypse, plâtre et finitions intérieures soignées.",
-  },
-  {
-    num: "03",
-    title: "Colombage métallique",
-    desc: "Structures métalliques pour tous types de projets commerciaux et industriels.",
-  },
-  {
-    num: "04",
-    title: "Location de main-d'œuvre",
-    desc: "Personnel certifié CCQ disponible pour renforcer vos équipes selon vos besoins.",
-  },
-];
-
-const values = [
-  {
-    Icon: Award,
-    title: "Excellence",
-    desc: "Standards irréprochables à chaque étape.",
-  },
-  {
-    Icon: Shield,
-    title: "Fiabilité",
-    desc: "Un partenaire solide sur qui compter.",
-  },
-  {
-    Icon: Clock,
-    title: "Ponctualité",
-    desc: "Délais et budgets toujours respectés.",
-  },
-];
+import { useLanguage } from "../i18n/LanguageContext";
 
 const logos = [
   { src: logoLayer1, alt: "Logo partenaire" },
@@ -73,7 +30,26 @@ const logos = [
   { src: logoStjean, alt: "Saint-Jean" },
 ];
 
+const projectImgs = [imgVieuxDuluth, imgAab, imgHup];
+
 export default function Home() {
+  const { t, ta } = useLanguage();
+
+  const stats = [
+    { val: "10+", lbl: t("home.stats.experience") },
+    { val: "100%", lbl: t("home.stats.satisfaction") },
+  ];
+
+  const services = ta<{ title: string; desc: string }>("home.services");
+
+  const values = [
+    { Icon: Award, title: t("home.values.excellence.title"), desc: t("home.values.excellence.desc") },
+    { Icon: Shield, title: t("home.values.reliability.title"), desc: t("home.values.reliability.desc") },
+    { Icon: Clock, title: t("home.values.punctuality.title"), desc: t("home.values.punctuality.desc") },
+  ];
+
+  const portfolioProjects = ta<{ title: string; cat: string; loc: string }>("home.portfolio.projects");
+
   return (
     <>
       <style>{`
@@ -94,7 +70,6 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center overflow-hidden bg-bcm-dark">
         {/* Video Background */}
         <div className="absolute inset-0">
-          {/* remove hand and wires */}
           <video
             className="w-full h-full object-cover opacity-60"
             src={bcmVideo}
@@ -122,31 +97,27 @@ export default function Home() {
 
         <div className="container-xl relative z-10 pt-24 pb-16">
           <div className="max-w-3xl">
-            <span className="label mb-6">
-              Entrepreneur Général — Rive-Sud de Montréal
-            </span>
+            <span className="label mb-6">{t("home.hero.badge")}</span>
 
             <h1 className="page-title mb-6">
-              Construire
+              {t("home.hero.title1")}
               <br />
-              <span className="text-bcm-red">l'Excellence</span>
+              <span className="text-bcm-red">{t("home.hero.title2")}</span>
               <br />
-              depuis 10&nbsp;ans
+              {t("home.hero.title3")}
             </h1>
 
             <p className="text-bcm-silver text-lg md:text-xl leading-relaxed max-w-xl mb-10 font-light">
-              Spécialistes en systèmes intérieurs et construction générale.
-              Résidentiel, commercial et industriel — de A à Z, dans les délais
-              et selon votre budget.
+              {t("home.hero.subtitle")}
             </p>
 
             <div className="flex flex-wrap gap-4">
               <Link to="/services" className="btn-red">
-                Découvrir nos services
+                {t("home.hero.servicesBtn")}
                 <ArrowRight size={16} />
               </Link>
               <Link to="/contact" className="btn-ghost">
-                Obtenir une soumission
+                {t("home.hero.quoteBtn")}
               </Link>
             </div>
           </div>
@@ -158,10 +129,7 @@ export default function Home() {
                 key={lbl}
                 className="bg-bcm-dark hover:bg-bcm-coal px-6 py-8 text-center transition-colors group"
               >
-                <div
-                  className="font-['Barlow_Condensed'] font-black text-4xl md:text-5xl text-bcm-red leading-none mb-1.5
-                                group-hover:scale-105 transition-transform origin-bottom"
-                >
+                <div className="font-['Barlow_Condensed'] font-black text-4xl md:text-5xl text-bcm-red leading-none mb-1.5 group-hover:scale-105 transition-transform origin-bottom">
                   {val}
                 </div>
                 <div className="text-bcm-silver text-[10px] font-['Barlow_Condensed'] font-semibold tracking-[0.2em] uppercase">
@@ -174,34 +142,24 @@ export default function Home() {
 
         {/* ─── TICKER TAPE ─────────────────────────────────────── */}
         <div className="absolute bottom-0 left-0 right-0 z-10 border-t border-white/5 bg-bcm-dark/70 backdrop-blur-sm overflow-hidden">
-          {/* Fade edges */}
           <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-bcm-dark to-transparent z-10 pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-bcm-dark to-transparent z-10 pointer-events-none" />
-
           <div className="flex ticker-track">
-            {/* Duplicated for seamless infinite loop */}
             {[...logos, ...logos].map(({ src, alt }, i) => (
-              <div
-                key={i}
-                className="flex-shrink-0 flex items-center justify-center px-12 py-5"
-              >
-                <img
-                  src={src}
-                  alt={alt}
-                  className="h-7 w-28 object-contain  hover:opacity-60 transition-opacity duration-300"
-                />
+              <div key={i} className="flex-shrink-0 flex items-center justify-center px-12 py-5">
+                <img src={src} alt={alt} className="h-7 w-28 object-contain hover:opacity-60 transition-opacity duration-300" />
               </div>
             ))}
           </div>
         </div>
 
-        {/* Scroll hint — moved up to clear the ticker */}
+        {/* Scroll hint */}
         <a
           href="#intro"
           className="absolute bottom-20 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-bcm-muted hover:text-bcm-silver transition-colors z-20"
         >
           <span className="font-['Barlow_Condensed'] text-[9px] tracking-[0.4em] uppercase">
-            Défiler
+            {t("home.scroll")}
           </span>
           <ChevronDown size={16} className="animate-bounce" />
         </a>
@@ -212,20 +170,17 @@ export default function Home() {
         <div className="container-xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="label mb-4">Qui sommes-nous</span>
+              <span className="label mb-4">{t("home.intro.badge")}</span>
               <h2 className="section-heading mb-5">
-                Groupe B.C.M.
+                {t("home.intro.title1")}
                 <br />
-                en quelques mots
+                {t("home.intro.title2")}
               </h2>
               <p className="text-bcm-silver leading-relaxed mb-6">
-                Établis sur la Rive-Sud de Montréal, à Saint-Jean-sur-Richelieu,
-                nous planifions, gérons et exécutons vos projets de construction
-                de A à Z. Notre équipe de spécialistes combine plus de 10 ans
-                d'expertise avec une approche résolument moderne et innovante.
+                {t("home.intro.desc")}
               </p>
               <Link to="/about" className="btn-ghost-red">
-                En savoir plus sur BCM
+                {t("home.intro.btn")}
                 <ArrowRight size={14} />
               </Link>
             </div>
@@ -262,14 +217,14 @@ export default function Home() {
                   className="text-[10px] tracking-[0.2em] uppercase text-white/30"
                   style={{ fontFamily: "'DM Mono', monospace" }}
                 >
-                  Ce que nous faisons
+                  {t("home.servicesSection.badge")}
                 </span>
               </div>
               <h2
                 className="text-4xl md:text-5xl section-heading text-white"
                 style={{ letterSpacing: "-0.02em" }}
               >
-                Nos Services
+                {t("home.servicesSection.title")}
               </h2>
             </div>
             <Link
@@ -277,16 +232,15 @@ export default function Home() {
               className="hidden md:inline-flex items-center gap-2 text-white/30 hover:text-white/60 text-[12px] transition-colors"
               style={{ fontFamily: "'DM Mono', monospace" }}
             >
-              Voir tout
+              {t("home.servicesSection.viewAll")}
               <ArrowUpRight size={14} />
             </Link>
           </div>
 
-          {/* Service list rows */}
           <div className="divide-y divide-white/[0.06]">
-            {services.map(({ num, title, desc }) => (
+            {services.map(({ title, desc }, i) => (
               <Link
-                key={num}
+                key={i}
                 to="/services"
                 className="group flex items-center justify-between py-7 hover:px-4 transition-all duration-300"
               >
@@ -295,7 +249,7 @@ export default function Home() {
                     className="text-[11px] text-white/20 w-8 flex-shrink-0"
                     style={{ fontFamily: "'DM Mono', monospace" }}
                   >
-                    {num}
+                    {String(i + 1).padStart(2, "0")}
                   </span>
                   <div>
                     <h3
@@ -322,44 +276,25 @@ export default function Home() {
         <div className="container-xl">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div>
-              <span className="label mb-4">Portfolio</span>
-              <h2 className="section-heading">Réalisations récentes</h2>
+              <span className="label mb-4">{t("home.portfolio.badge")}</span>
+              <h2 className="section-heading">{t("home.portfolio.title")}</h2>
             </div>
             <Link to="/projects" className="btn-ghost-red flex-shrink-0">
-              Voir tous les projets
+              {t("home.portfolio.viewAll")}
               <ArrowRight size={14} />
             </Link>
           </div>
 
           <div className="grid md:grid-cols-3 gap-4">
-            {[
-              {
-                img: "https://images.pexels.com/photos/380768/pexels-photo-380768.jpeg?auto=compress&cs=tinysrgb&w=800",
-                title: "Centre Commercial Promenade",
-                cat: "Commercial",
-                loc: "Saint-Jean-sur-Richelieu",
-              },
-              {
-                img: "https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=800",
-                title: "Usine de Production",
-                cat: "Industriel",
-                loc: "Longueuil",
-              },
-              {
-                img: "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=800",
-                title: "Rénovation Hôtel Prestige",
-                cat: "Rénovation",
-                loc: "Québec",
-              },
-            ].map(({ img, title, cat, loc }) => (
+            {portfolioProjects.map(({ title, cat, loc }, i) => (
               <Link
-                key={title}
+                key={i}
                 to="/projects"
                 className="group relative overflow-hidden border border-white/5 hover:border-bcm-red/30 transition-colors block"
               >
                 <div className="relative h-56 overflow-hidden">
                   <img
-                    src={img}
+                    src={projectImgs[i]}
                     alt={title}
                     className="w-full h-full object-cover opacity-75 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                   />
@@ -398,15 +333,13 @@ export default function Home() {
         <div className="container-xl relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
             <h2 className="font-['Barlow_Condensed'] font-black text-3xl md:text-4xl uppercase text-white leading-tight mb-2">
-              Parlons de votre projet
+              {t("home.cta.title")}
             </h2>
-            <p className="text-white/75 text-base">
-              Soumission gratuite · Réponse en 24h · Saint-Jean-sur-Richelieu
-            </p>
+            <p className="text-white/75 text-base">{t("home.cta.subtitle")}</p>
           </div>
           <div className="flex flex-wrap gap-3 flex-shrink-0">
             <Link to="/contact" className="btn-ghost">
-              Nous écrire
+              {t("home.cta.write")}
               <ArrowRight size={14} />
             </Link>
             <a href="tel:450-741-1351" className="btn-ghost">

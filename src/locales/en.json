@@ -1,0 +1,347 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "projects": "Projects",
+    "about": "About",
+    "careers": "Careers",
+    "contact": "Contact",
+    "cta": "Free Quote",
+    "getQuote": "Get a Quote"
+  },
+  "footer": {
+    "cta": {
+      "title": "Ready to start your project?",
+      "subtitle": "Contact us for a free, no-obligation quote.",
+      "btn": "Get a Quote"
+    },
+    "brand": {
+      "desc": "General contractor specializing in interior systems for over 10 years. Excellence, reliability and innovation on every project.",
+      "location": "South Shore of Montreal"
+    },
+    "sections": {
+      "services": "Services",
+      "company": "Company",
+      "certifications": "Certifications",
+      "follow": "Follow Us"
+    },
+    "serviceLinks": [
+      "Project Management",
+      "Drywall Installation",
+      "Carpentry",
+      "Plastering",
+      "Metal Framing",
+      "Insulation & Soundproofing",
+      "Suspended Ceilings",
+      "Labour Rental"
+    ],
+    "companyLinks": [
+      "About",
+      "Our Services",
+      "Our Projects",
+      "Careers",
+      "Contact"
+    ],
+    "certifications": ["RBQ License", "CCQ Certified", "OHS Compliant"],
+    "legal": {
+      "rights": "All rights reserved.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use"
+    }
+  },
+  "home": {
+    "hero": {
+      "badge": "General Contractor — South Shore of Montreal",
+      "title1": "Building",
+      "title2": "Excellence",
+      "title3": "for 10\u00a0years",
+      "subtitle": "Specialists in interior systems and general construction. Residential, commercial and industrial — from A to Z, on time and on budget.",
+      "servicesBtn": "Explore our services",
+      "quoteBtn": "Get a Quote"
+    },
+    "stats": {
+      "experience": "Years of experience",
+      "satisfaction": "Client satisfaction"
+    },
+    "scroll": "Scroll",
+    "intro": {
+      "badge": "Who we are",
+      "title1": "Groupe B.C.M.",
+      "title2": "in a few words",
+      "desc": "Based on the South Shore of Montreal, in Saint-Jean-sur-Richelieu, we plan, manage and execute your construction projects from A to Z. Our team of specialists combines over 10 years of expertise with a resolutely modern and innovative approach.",
+      "btn": "Learn more about BCM"
+    },
+    "values": {
+      "excellence": { "title": "Excellence", "desc": "Uncompromising standards at every stage." },
+      "reliability": { "title": "Reliability", "desc": "A solid partner you can count on." },
+      "punctuality": { "title": "Punctuality", "desc": "Deadlines and budgets always respected." }
+    },
+    "servicesSection": {
+      "badge": "What we do",
+      "title": "Our Services",
+      "viewAll": "View all"
+    },
+    "services": [
+      {
+        "title": "Project Management",
+        "desc": "Rigorous planning, coordination and monitoring of your projects from start to finish."
+      },
+      {
+        "title": "Drywall & Plastering",
+        "desc": "Professional installation of drywall, plaster and interior finishes."
+      },
+      {
+        "title": "Metal Framing",
+        "desc": "Metal structures for all types of commercial and industrial projects."
+      },
+      {
+        "title": "Labour Rental",
+        "desc": "CCQ-certified staff available to reinforce your teams as needed."
+      }
+    ],
+    "portfolio": {
+      "badge": "Portfolio",
+      "title": "Recent Projects",
+      "viewAll": "View all projects",
+      "projects": [
+        { "title": "Promenade Commercial Centre", "cat": "Commercial", "loc": "Saint-Jean-sur-Richelieu" },
+        { "title": "Production Plant", "cat": "Industrial", "loc": "Longueuil" },
+        { "title": "Prestige Hotel Renovation", "cat": "Renovation", "loc": "Quebec City" }
+      ]
+    },
+    "cta": {
+      "title": "Let's talk about your project",
+      "subtitle": "Free quote · Response within 24h · Saint-Jean-sur-Richelieu",
+      "write": "Send us a message"
+    }
+  },
+  "about": {
+    "hero": {
+      "badge": "Our story",
+      "subtitle": "General contractor specializing in interior systems for over 10 years, rooted on the South Shore of Montreal."
+    },
+    "story": {
+      "badge": "Our mission",
+      "title": "Who we are",
+      "p1": "Located on the South Shore of Montreal, in the Saint-Jean-sur-Richelieu region, Groupe B.C.M. has established itself as a trusted player in Quebec's construction industry. Our vision has taken shape over the years thanks to a team of specialists united by strong relationships and a shared passion for excellence.",
+      "p2": "As a general contractor specializing in interior systems, we plan, manage and execute your projects from A to Z — whether residential, commercial or industrial construction. Our approach combines decades of experience with a constant openness to innovation and new technologies.",
+      "advantages": [
+        "Over 10 years of construction experience in Quebec",
+        "Team of qualified and certified professionals (RBQ)",
+        "Complete and transparent project management from start to finish",
+        "Strict adherence to OHS safety standards",
+        "Exclusive use of superior quality materials",
+        "After-sales service and full warranties on our work"
+      ],
+      "btn": "Start a project"
+    },
+    "timeline": {
+      "title": "Our Journey",
+      "milestones": [
+        { "year": "Founded", "event": "Creation of Groupe B.C.M. in Saint-Jean-sur-Richelieu, focused on excellence in residential service" },
+        { "year": "5 years", "event": "Major shift towards commercial and industrial sectors, securing innovative contracts on the South Shore" },
+        { "year": "10 years", "event": "Consolidation of our interior systems expertise and deployment of specialized drywall and framing teams" },
+        { "year": "Today", "event": "Still growing" }
+      ]
+    },
+    "values": {
+      "badge": "What guides us",
+      "title": "Our Values",
+      "items": [
+        { "title": "Excellence", "desc": "Uncompromising standards guide every decision, from design to delivery." },
+        { "title": "Reliability", "desc": "We keep our word. Our clients count on us to honour commitments, deadlines and budgets." },
+        { "title": "Punctuality", "desc": "A project delivered late is costly. We master our schedules with rigour." },
+        { "title": "Collaboration", "desc": "We work with you, not just for you. Open communication at every stage." }
+      ]
+    },
+    "cta": {
+      "badge": "Let's work together",
+      "title": "Ready to build something?",
+      "desc": "Our team is available to discuss your project and provide a free, no-obligation estimate.",
+      "contact": "Contact us",
+      "projects": "View our projects"
+    }
+  },
+  "services": {
+    "hero": {
+      "badge": "What we do",
+      "subtitle": "Interior systems specialists — from project management to qualified labour rental."
+    },
+    "items": [
+      {
+        "title": "Metal Framing",
+        "desc": "Installation of metal framing systems for interior partitions and exterior walls, offering strength, precision and fast execution.",
+        "features": ["Non-load-bearing partitions", "Exterior walls", "Complex structures", "Code compliance"]
+      },
+      {
+        "title": "Insulation & Soundproofing",
+        "desc": "Installation of high-performance thermal and acoustic insulation systems to improve comfort and reduce energy costs in your buildings.",
+        "features": ["Thermal insulation", "Acoustic soundproofing", "Vapour barrier", "Energy certification"]
+      },
+      {
+        "title": "Drywall Installation",
+        "desc": "Professional installation of drywall panels for partitions and ceilings, with careful finishes adapted to commercial and industrial requirements.",
+        "features": ["Interior partitions", "Flat and sloped ceilings", "Curved walls", "Paint-ready finish"]
+      },
+      {
+        "title": "Plastering",
+        "desc": "Application of traditional and contemporary plaster for durable and aesthetic surfaces. Recognized expertise on commercial and institutional projects.",
+        "features": ["Traditional plaster", "Special coatings", "Repairs and patching", "Textured finishes"]
+      },
+      {
+        "title": "Suspended Ceilings",
+        "desc": "Design and installation of acoustic and decorative suspended ceiling systems for commercial spaces, offices and institutional establishments.",
+        "features": ["Acoustic ceilings", "Grids and tiles", "Special ceilings", "Mechanical integration"]
+      },
+      {
+        "title": "Acoustic Treatment",
+        "desc": "Design and installation of acoustic solutions to improve sound comfort in your residential, commercial and industrial spaces.",
+        "features": ["Acoustic panels", "Metal ceiling", "Wood ceiling", "Custom solutions"]
+      },
+      {
+        "title": "Project Management",
+        "desc": "Rigorous planning, coordination and monitoring of your projects from start to finish. Your single point of contact managing every detail for you.",
+        "features": ["Planning and scheduling", "Subcontractor coordination", "Budget control", "Progress reports"]
+      },
+      {
+        "title": "Labour Rental",
+        "desc": "Provision of qualified and certified workers to reinforce your teams for short or long-term needs, with total flexibility.",
+        "features": ["CCQ-certified staff", "Short/long-term flexibility", "Supervisors available", "All specialties"]
+      }
+    ],
+    "request": "Request this service",
+    "process": {
+      "badge": "How we work",
+      "title": "Our Process",
+      "steps": [
+        { "title": "Consultation", "desc": "Free initial meeting to understand your needs, budget and deadlines." },
+        { "title": "Planning", "desc": "Development of the project plan, detailed estimates and schedule." },
+        { "title": "Execution", "desc": "Work carried out with continuous supervision and regular communication." },
+        { "title": "Delivery", "desc": "Handover with final inspection, documentation and full warranties." }
+      ]
+    },
+    "cta": {
+      "title": "Need a specific service?",
+      "desc": "We offer custom solutions tailored to your reality.",
+      "btn": "Get a free quote"
+    }
+  },
+  "projects": {
+    "hero": {
+      "badge": "Our portfolio",
+      "subtitle": "Over 500 projects delivered with excellence across the South Shore and Quebec."
+    },
+    "filters": {
+      "all": "All projects",
+      "commercial": "Commercial",
+      "industrial": "Industrial",
+      "renovation": "Renovation"
+    },
+    "cta": {
+      "title": "Your project could be here",
+      "desc": "Let's talk about what we can accomplish together.",
+      "btn": "Start my project"
+    }
+  },
+  "contact": {
+    "hero": {
+      "badge": "Let's work together",
+      "subtitle": "Free, no-obligation quote. Our team responds within 24 business hours."
+    },
+    "cards": {
+      "address": { "title": "Address", "line": "South Shore of Montreal", "link": "View on map" },
+      "phone": { "title": "Phone", "link": "Call now" },
+      "email": { "title": "Email", "link": "Send an email" },
+      "hours": { "title": "Business Hours", "line1": "Monday – Friday", "line2": "8:00 AM to 5:00 PM" }
+    },
+    "form": {
+      "title": "Quote Request",
+      "subtitle": "Fill out the form below and we will contact you as soon as possible.",
+      "name": "Full name *",
+      "namePlaceholder": "John Smith",
+      "phone": "Phone",
+      "phonePlaceholder": "450-000-0000",
+      "email": "Email *",
+      "emailPlaceholder": "john.smith@example.com",
+      "type": "Project type",
+      "typeDefault": "Select a project type",
+      "types": [
+        "Commercial construction",
+        "Industrial construction",
+        "Interior systems",
+        "Renovation & expansion",
+        "Site management",
+        "Design & planning",
+        "Other"
+      ],
+      "message": "Project details *",
+      "messagePlaceholder": "Describe your project — type of work, approximate area, location, desired timeline...",
+      "submit": "Send request",
+      "note": "Submitting this form will open your email app with the information pre-filled.",
+      "emailSubject": "Quote Request"
+    },
+    "phoneCard": {
+      "badge": "Prefer to call?",
+      "title": "Immediate response",
+      "desc": "Our team is available Monday to Friday, 8 AM to 5 PM."
+    }
+  },
+  "careers": {
+    "hero": {
+      "badge": "Join the team",
+      "title1": "Looking",
+      "title2": "for a job?",
+      "subtitle": "Send us your application directly. We are always looking for passionate workers to help grow our company."
+    },
+    "intro": {
+      "badge": "Our company",
+      "title": "Build your career with us",
+      "p1": "As a well-established general contractor specializing in interior systems, we are always looking for workers to help continue developing our company.",
+      "p2": "Come share your experience or learn within a dynamic team. Whether you are a seasoned professional or just starting out, we have a place for you.",
+      "perks": [
+        "Dynamic and close-knit team",
+        "Varied and stimulating projects",
+        "Training and professional development",
+        "Respectful work environment",
+        "Rigorous OHS standards",
+        "Company stability and growth"
+      ],
+      "btn": "Send my application"
+    },
+    "positions": {
+      "badge": "Available positions",
+      "title": "Job openings",
+      "items": [
+        { "title": "Interior Systems Installer", "desc": "Installation of drywall, partitions, suspended ceilings and interior systems." },
+        { "title": "Plasterer", "desc": "Application of traditional and contemporary plaster on commercial and institutional projects." },
+        { "title": "Carpenter", "desc": "Construction of wood and steel structures for all types of construction projects." }
+      ],
+      "apply": "Apply"
+    },
+    "contact": {
+      "badge": "Contact us",
+      "title": "Take the first step today",
+      "desc": "Contact us today to learn about our employment opportunities, by phone or email. We will be happy to discuss your profile and available opportunities.",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone"
+    },
+    "apply": {
+      "title": "To apply",
+      "desc": "Send us your CV and a brief introduction to",
+      "descEnd": "mentioning the position you are interested in. We will get back to you as soon as possible.",
+      "steps": [
+        "Mention the position you are applying for",
+        "Attach your up-to-date CV",
+        "Briefly describe your experience"
+      ],
+      "btn": "Send my application"
+    },
+    "bottom": {
+      "badge": "Let's work together",
+      "title": "Questions about our services?",
+      "desc": "Our team is available to answer all your questions and point you in the right direction.",
+      "contactBtn": "Contact page",
+      "aboutBtn": "Learn more about BCM"
+    }
+  }
+}

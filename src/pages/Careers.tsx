@@ -1,31 +1,14 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Phone, Mail, CheckCircle2 } from "lucide-react";
-
-const positions = [
-  {
-    title: "Poseur de système intérieur",
-    desc: "Installation de gypse, cloisons, plafonds suspendus et systèmes intérieurs.",
-  },
-  {
-    title: "Plâtrier",
-    desc: "Application de plâtre traditionnel et contemporain sur projets commerciaux et institutionnels.",
-  },
-  {
-    title: "Charpentier",
-    desc: "Construction de structures bois et acier pour tous types de projets de construction.",
-  },
-];
-
-const perks = [
-  "Équipe dynamique et soudée",
-  "Projets variés et stimulants",
-  "Formation et développement professionnel",
-  "Environnement de travail respectueux",
-  "Normes SST rigoureusement respectées",
-  "Stabilité et croissance de l'entreprise",
-];
+import { useLanguage } from "../i18n/LanguageContext";
 
 export default function Careers() {
+  const { t, ta } = useLanguage();
+
+  const perks = ta<string>("careers.intro.perks");
+  const positions = ta<{ title: string; desc: string }>("careers.positions.items");
+  const applySteps = ta<string>("careers.apply.steps");
+
   return (
     <>
       {/* ─── PAGE HERO ────────────────────────────────────────── */}
@@ -33,16 +16,14 @@ export default function Careers() {
         <div className="page-hero-bg" />
         <div className="page-hero-glow" />
         <div className="container-xl relative z-10">
-          <span className="label mb-5">Rejoignez l'équipe</span>
+          <span className="label mb-5">{t("careers.hero.badge")}</span>
           <h1 className="page-title mb-4">
-            À la recherche
+            {t("careers.hero.title1")}
             <br />
-            <span className="text-bcm-red">d'un emploi?</span>
+            <span className="text-bcm-red">{t("careers.hero.title2")}</span>
           </h1>
           <p className="text-bcm-silver text-lg max-w-xl leading-relaxed font-light">
-            Envoyez-nous directement votre candidature. Nous sommes toujours à
-            la recherche de travailleurs passionnés pour développer notre
-            entreprise.
+            {t("careers.hero.subtitle")}
           </p>
         </div>
       </div>
@@ -53,36 +34,23 @@ export default function Careers() {
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             {/* Left */}
             <div>
-              <span className="label mb-5">Notre entreprise</span>
+              <span className="label mb-5">{t("careers.intro.badge")}</span>
               <div className="red-bar mb-6" />
-              <h2 className="section-heading mb-6">
-                Construisez votre carrière avec nous
-              </h2>
-              <p className="text-bcm-silver leading-relaxed mb-5">
-                Étant un entrepreneur général spécialisé dans le système
-                intérieur bien établi, nous sommes toujours à la recherche de
-                travailleurs pour continuer de développer notre entreprise.
-              </p>
-              <p className="text-bcm-silver leading-relaxed mb-8">
-                Venez transmettre votre expérience ou apprendre au sein d'une
-                équipe dynamique. Que vous soyez un professionnel aguerri ou en
-                début de carrière, nous avons une place pour vous.
-              </p>
+              <h2 className="section-heading mb-6">{t("careers.intro.title")}</h2>
+              <p className="text-bcm-silver leading-relaxed mb-5">{t("careers.intro.p1")}</p>
+              <p className="text-bcm-silver leading-relaxed mb-8">{t("careers.intro.p2")}</p>
 
               <div className="space-y-3 mb-10">
                 {perks.map((perk, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <CheckCircle2
-                      size={17}
-                      className="text-bcm-red flex-shrink-0 mt-0.5"
-                    />
+                    <CheckCircle2 size={17} className="text-bcm-red flex-shrink-0 mt-0.5" />
                     <span className="text-bcm-silver text-sm">{perk}</span>
                   </div>
                 ))}
               </div>
 
               <a href="mailto:info@groupe-bcm.com" className="btn-red">
-                Envoyer ma candidature
+                {t("careers.intro.btn")}
                 <ArrowRight size={16} />
               </a>
             </div>
@@ -111,15 +79,15 @@ export default function Careers() {
       <section className="section-pad bg-bcm-coal">
         <div className="container-xl">
           <div className="mb-12">
-            <span className="label mb-5">Postes disponibles</span>
+            <span className="label mb-5">{t("careers.positions.badge")}</span>
             <div className="red-bar mb-4" />
-            <h2 className="section-heading">Emplois disponibles</h2>
+            <h2 className="section-heading">{t("careers.positions.title")}</h2>
           </div>
 
           <div className="divide-y divide-white/5">
             {positions.map(({ title, desc }, i) => (
               <div
-                key={title}
+                key={i}
                 className="group grid md:grid-cols-12 gap-6 py-8 items-center hover:px-4 transition-all duration-300"
               >
                 <span className="md:col-span-1 font-['Barlow_Condensed'] text-xs tracking-widest text-white/20">
@@ -128,15 +96,13 @@ export default function Careers() {
                 <h3 className="md:col-span-4 font-['Barlow_Condensed'] font-bold text-xl uppercase tracking-wide text-white group-hover:text-bcm-red transition-colors leading-snug">
                   {title}
                 </h3>
-                <p className="md:col-span-5 text-bcm-silver text-sm leading-relaxed">
-                  {desc}
-                </p>
+                <p className="md:col-span-5 text-bcm-silver text-sm leading-relaxed">{desc}</p>
                 <div className="md:col-span-2 flex justify-end">
                   <a
                     href="mailto:info@groupe-bcm.com"
                     className="inline-flex items-center gap-2 text-bcm-red text-xs font-['Barlow_Condensed'] tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-all"
                   >
-                    Postuler
+                    {t("careers.positions.apply")}
                     <ArrowRight size={12} />
                   </a>
                 </div>
@@ -152,17 +118,10 @@ export default function Careers() {
           <div className="grid md:grid-cols-2 gap-16 items-start">
             {/* Left */}
             <div>
-              <span className="label mb-5">Contactez-nous</span>
+              <span className="label mb-5">{t("careers.contact.badge")}</span>
               <div className="red-bar mb-6" />
-              <h2 className="section-heading mb-6">
-                Faites le premier pas aujourd'hui
-              </h2>
-              <p className="text-bcm-silver leading-relaxed mb-8">
-                Contactez-nous dès aujourd'hui pour vous informer sur nos
-                perspectives d'emploi, par téléphone ou par courriel. Nous
-                serons heureux de discuter de votre profil et des opportunités
-                disponibles.
-              </p>
+              <h2 className="section-heading mb-6">{t("careers.contact.title")}</h2>
+              <p className="text-bcm-silver leading-relaxed mb-8">{t("careers.contact.desc")}</p>
 
               <div className="space-y-4">
                 <a
@@ -174,16 +133,11 @@ export default function Careers() {
                   </div>
                   <div>
                     <p className="font-['Barlow_Condensed'] text-[10px] tracking-[0.2em] uppercase text-white/30 mb-0.5">
-                      Courriel
+                      {t("careers.contact.emailLabel")}
                     </p>
-                    <p className="text-white text-sm font-medium">
-                      info@groupe-bcm.com
-                    </p>
+                    <p className="text-white text-sm font-medium">info@groupe-bcm.com</p>
                   </div>
-                  <ArrowRight
-                    size={14}
-                    className="text-white/20 group-hover:text-bcm-red ml-auto transition-colors"
-                  />
+                  <ArrowRight size={14} className="text-white/20 group-hover:text-bcm-red ml-auto transition-colors" />
                 </a>
 
                 <a
@@ -195,16 +149,13 @@ export default function Careers() {
                   </div>
                   <div>
                     <p className="font-['Barlow_Condensed'] text-[10px] tracking-[0.2em] uppercase text-white/30 mb-0.5">
-                      Téléphone
+                      {t("careers.contact.phoneLabel")}
                     </p>
                     <p className="text-white text-sm font-medium font-['Barlow_Condensed'] tracking-wider">
                       450-741-1351
                     </p>
                   </div>
-                  <ArrowRight
-                    size={14}
-                    className="text-white/20 group-hover:text-bcm-red ml-auto transition-colors"
-                  />
+                  <ArrowRight size={14} className="text-white/20 group-hover:text-bcm-red ml-auto transition-colors" />
                 </a>
               </div>
             </div>
@@ -212,44 +163,34 @@ export default function Careers() {
             {/* Right — application card */}
             <div className="bg-bcm-coal border border-white/5 p-8">
               <h3 className="font-['Barlow_Condensed'] font-bold text-sm uppercase tracking-widest text-white mb-5 pb-4 border-b border-white/5">
-                Pour postuler
+                {t("careers.apply.title")}
               </h3>
               <p className="text-bcm-silver text-sm leading-relaxed mb-8">
-                Envoyez-nous votre CV et une brève présentation à{" "}
+                {t("careers.apply.desc")}{" "}
                 <a
                   href="mailto:info@groupe-bcm.com"
                   className="text-white hover:text-bcm-red underline underline-offset-2 transition-colors"
                 >
                   info@groupe-bcm.com
                 </a>{" "}
-                en mentionnant le poste qui vous intéresse. Nous communiquerons
-                avec vous dans les plus brefs délais.
+                {t("careers.apply.descEnd")}
               </p>
 
               <div className="space-y-4 mb-8">
-                {[
-                  "Mentionnez le poste visé",
-                  "Joignez votre CV à jour",
-                  "Décrivez brièvement votre expérience",
-                ].map((step, i) => (
+                {applySteps.map((step, i) => (
                   <div key={i} className="flex items-start gap-4">
                     <div className="w-7 h-7 bg-bcm-red/10 border border-bcm-red/20 flex items-center justify-center flex-shrink-0">
                       <span className="font-['Barlow_Condensed'] font-bold text-bcm-red text-xs">
                         {String(i + 1).padStart(2, "0")}
                       </span>
                     </div>
-                    <span className="text-bcm-silver text-sm leading-relaxed mt-0.5">
-                      {step}
-                    </span>
+                    <span className="text-bcm-silver text-sm leading-relaxed mt-0.5">{step}</span>
                   </div>
                 ))}
               </div>
 
-              <a
-                href="mailto:info@groupe-bcm.com"
-                className="btn-red w-full justify-center"
-              >
-                Envoyer ma candidature
+              <a href="mailto:info@groupe-bcm.com" className="btn-red w-full justify-center">
+                {t("careers.apply.btn")}
                 <ArrowRight size={15} />
               </a>
             </div>
@@ -260,22 +201,15 @@ export default function Careers() {
       {/* ─── BOTTOM LINK ──────────────────────────────────────── */}
       <section className="py-20 bg-bcm-dark border-t border-white/5">
         <div className="container-xl text-center">
-          <span className="label justify-center mb-5">
-            Travaillons ensemble
-          </span>
-          <h2 className="section-heading mb-4">
-            Des questions sur nos services?
-          </h2>
-          <p className="text-bcm-silver mb-8 max-w-lg mx-auto">
-            Notre équipe est disponible pour répondre à toutes vos questions et
-            vous orienter vers les bonnes ressources.
-          </p>
+          <span className="label justify-center mb-5">{t("careers.bottom.badge")}</span>
+          <h2 className="section-heading mb-4">{t("careers.bottom.title")}</h2>
+          <p className="text-bcm-silver mb-8 max-w-lg mx-auto">{t("careers.bottom.desc")}</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link to="/contact" className="btn-red">
-              Page contact <ArrowRight size={16} />
+              {t("careers.bottom.contactBtn")} <ArrowRight size={16} />
             </Link>
             <Link to="/about" className="btn-ghost-red">
-              En savoir plus sur BCM
+              {t("careers.bottom.aboutBtn")}
             </Link>
           </div>
         </div>

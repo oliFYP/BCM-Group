@@ -1,5 +1,6 @@
 import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { LanguageProvider } from "./i18n/LanguageContext";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -20,6 +21,7 @@ function ScrollToTop() {
 
 function App() {
   return (
+    <LanguageProvider>
     <HashRouter>
       <ScrollToTop />
       <div className="flex flex-col min-h-screen bg-bcm-dark">
@@ -37,6 +39,7 @@ function App() {
         <Footer />
       </div>
     </HashRouter>
+    </LanguageProvider>
   );
 }
 

@@ -2,19 +2,12 @@ import { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import bcmLogo from "../assets/BCM_New.png";
-
-const navLinks = [
-  { to: "/", label: "Accueil", end: true },
-  { to: "/services", label: "Services", end: false },
-  { to: "/projects", label: "Projets", end: false },
-  { to: "/about", label: "À Propos", end: false },
-  { to: "/careers", label: "Carrières", end: false },
-  { to: "/contact", label: "Contact", end: false },
-];
+import { useLanguage } from "../i18n/LanguageContext";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { lang, setLang, t } = useLanguage();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 30);
@@ -28,6 +21,15 @@ export default function Header() {
       document.body.style.overflow = "";
     };
   }, [menuOpen]);
+
+  const navLinks = [
+    { to: "/", label: t("nav.home"), end: true },
+    { to: "/services", label: t("nav.services"), end: false },
+    { to: "/projects", label: t("nav.projects"), end: false },
+    { to: "/about", label: t("nav.about"), end: false },
+    { to: "/careers", label: t("nav.careers"), end: false },
+    { to: "/contact", label: t("nav.contact"), end: false },
+  ];
 
   return (
     <>
@@ -78,12 +80,20 @@ export default function Header() {
                 </NavLink>
               ))}
 
+              {/* Language toggle */}
+              <button
+                onClick={() => setLang(lang === "fr" ? "en" : "fr")}
+                className="ml-4 text-[11px] font-['Barlow_Condensed'] font-bold tracking-widest uppercase text-white/40 hover:text-white border border-white/10 hover:border-white/30 px-3 py-1.5 transition-all"
+              >
+                {lang === "fr" ? "EN" : "FR"}
+              </button>
+
               <Link
                 to="/contact"
-                className="ml-6 inline-flex items-center gap-2 bg-[#c8161d] hover:bg-[#9e1015] text-white text-[12px] font-medium tracking-wide px-5 py-2.5 transition-colors duration-200"
+                className="ml-3 inline-flex items-center gap-2 bg-[#c8161d] hover:bg-[#9e1015] text-white text-[12px] font-medium tracking-wide px-5 py-2.5 transition-colors duration-200"
               >
                 <Phone size={12} />
-                Soumission gratuite
+                {t("nav.cta")}
               </Link>
             </nav>
 
@@ -150,12 +160,19 @@ export default function Header() {
 
         {/* Footer CTA */}
         <div className="px-4 pb-8 pt-4 border-t border-white/[0.06] space-y-3">
+          {/* Language toggle mobile */}
+          <button
+            onClick={() => setLang(lang === "fr" ? "en" : "fr")}
+            className="w-full text-[11px] font-['Barlow_Condensed'] font-bold tracking-widest uppercase text-white/40 hover:text-white border border-white/10 hover:border-white/30 py-2.5 transition-all"
+          >
+            {lang === "fr" ? "English" : "Français"}
+          </button>
           <Link
             to="/contact"
             onClick={() => setMenuOpen(false)}
             className="flex items-center justify-center gap-2 bg-[#c8161d] hover:bg-[#9e1015] text-white text-[13px] font-medium py-3.5 transition-colors"
           >
-            Obtenir une soumission
+            {t("nav.getQuote")}
           </Link>
           <a
             href="tel:450-741-1351"

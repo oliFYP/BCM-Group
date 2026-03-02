@@ -1,0 +1,347 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "projects": "Projets",
+    "about": "À Propos",
+    "careers": "Carrières",
+    "contact": "Contact",
+    "cta": "Soumission gratuite",
+    "getQuote": "Obtenir une soumission"
+  },
+  "footer": {
+    "cta": {
+      "title": "Prêt à démarrer votre projet?",
+      "subtitle": "Contactez-nous pour une soumission gratuite et sans engagement.",
+      "btn": "Obtenir une soumission"
+    },
+    "brand": {
+      "desc": "Entrepreneur général spécialisé en systèmes intérieurs depuis plus de 10 ans. Excellence, fiabilité et innovation à chaque projet.",
+      "location": "Rive-Sud de Montréal"
+    },
+    "sections": {
+      "services": "Services",
+      "company": "Entreprise",
+      "certifications": "Certifications",
+      "follow": "Suivez-nous"
+    },
+    "serviceLinks": [
+      "Gestion de projet",
+      "Pose de gypse",
+      "Charpente",
+      "Plâtre",
+      "Colombage métallique",
+      "Isolation & Insonorisation",
+      "Plafonds suspendus",
+      "Location de main-d'œuvre"
+    ],
+    "companyLinks": [
+      "À Propos",
+      "Nos Services",
+      "Nos Projets",
+      "Carrières",
+      "Contact"
+    ],
+    "certifications": ["Licence RBQ", "CCQ Certifié", "SST Conforme"],
+    "legal": {
+      "rights": "Tous droits réservés.",
+      "privacy": "Politique de confidentialité",
+      "terms": "Conditions d'utilisation"
+    }
+  },
+  "home": {
+    "hero": {
+      "badge": "Entrepreneur Général — Rive-Sud de Montréal",
+      "title1": "Construire",
+      "title2": "l'Excellence",
+      "title3": "depuis 10\u00a0ans",
+      "subtitle": "Spécialistes en systèmes intérieurs et construction générale. Résidentiel, commercial et industriel — de A à Z, dans les délais et selon votre budget.",
+      "servicesBtn": "Découvrir nos services",
+      "quoteBtn": "Obtenir une soumission"
+    },
+    "stats": {
+      "experience": "Ans d'expérience",
+      "satisfaction": "Satisfaction client"
+    },
+    "scroll": "Défiler",
+    "intro": {
+      "badge": "Qui sommes-nous",
+      "title1": "Groupe B.C.M.",
+      "title2": "en quelques mots",
+      "desc": "Établis sur la Rive-Sud de Montréal, à Saint-Jean-sur-Richelieu, nous planifions, gérons et exécutons vos projets de construction de A à Z. Notre équipe de spécialistes combine plus de 10 ans d'expertise avec une approche résolument moderne et innovante.",
+      "btn": "En savoir plus sur BCM"
+    },
+    "values": {
+      "excellence": { "title": "Excellence", "desc": "Standards irréprochables à chaque étape." },
+      "reliability": { "title": "Fiabilité", "desc": "Un partenaire solide sur qui compter." },
+      "punctuality": { "title": "Ponctualité", "desc": "Délais et budgets toujours respectés." }
+    },
+    "servicesSection": {
+      "badge": "Ce que nous faisons",
+      "title": "Nos Services",
+      "viewAll": "Voir tout"
+    },
+    "services": [
+      {
+        "title": "Gestion de projet",
+        "desc": "Planification, coordination et suivi rigoureux de vos chantiers du début à la fin."
+      },
+      {
+        "title": "Pose de gypse & Plâtre",
+        "desc": "Installation professionnelle de gypse, plâtre et finitions intérieures soignées."
+      },
+      {
+        "title": "Colombage métallique",
+        "desc": "Structures métalliques pour tous types de projets commerciaux et industriels."
+      },
+      {
+        "title": "Location de main-d'œuvre",
+        "desc": "Personnel certifié CCQ disponible pour renforcer vos équipes selon vos besoins."
+      }
+    ],
+    "portfolio": {
+      "badge": "Portfolio",
+      "title": "Réalisations récentes",
+      "viewAll": "Voir tous les projets",
+      "projects": [
+        { "title": "Centre Commercial Promenade", "cat": "Commercial", "loc": "Saint-Jean-sur-Richelieu" },
+        { "title": "Usine de Production", "cat": "Industriel", "loc": "Longueuil" },
+        { "title": "Rénovation Hôtel Prestige", "cat": "Rénovation", "loc": "Québec" }
+      ]
+    },
+    "cta": {
+      "title": "Parlons de votre projet",
+      "subtitle": "Soumission gratuite · Réponse en 24h · Saint-Jean-sur-Richelieu",
+      "write": "Nous écrire"
+    }
+  },
+  "about": {
+    "hero": {
+      "badge": "Notre histoire",
+      "subtitle": "Entrepreneur général spécialisé en systèmes intérieurs depuis plus de 10 ans, enraciné sur la Rive-Sud de Montréal."
+    },
+    "story": {
+      "badge": "Notre mission",
+      "title": "Qui nous sommes",
+      "p1": "Situé sur la Rive-Sud de Montréal, dans la région de Saint-Jean-sur-Richelieu, Groupe B.C.M. s'est établi comme un acteur de confiance dans l'industrie de la construction au Québec. Notre vision a pris forme au fil des années grâce à une équipe de spécialistes unis par des relations solides et une passion commune pour l'excellence.",
+      "p2": "Entrepreneur général spécialisé en systèmes intérieurs, nous planifions, gérons et exécutons vos projets de A à Z — qu'il s'agisse de construction résidentielle, commerciale ou industrielle. Notre approche combine l'expérience de trois décennies avec une ouverture constante à l'innovation et aux nouvelles technologies.",
+      "advantages": [
+        "Plus de 10 ans d'expérience en construction au Québec",
+        "Équipe de professionnels qualifiés et certifiés (RBQ)",
+        "Gestion de projet complète et transparente du début à la fin",
+        "Respect rigoureux des normes de sécurité SST",
+        "Utilisation exclusive de matériaux de qualité supérieure",
+        "Service après-vente et garanties complètes sur nos travaux"
+      ],
+      "btn": "Démarrer un projet"
+    },
+    "timeline": {
+      "title": "Notre Parcours",
+      "milestones": [
+        { "year": "Fondation", "event": "Création du Groupe B.C.M. à Saint-Jean-sur-Richelieu, axé sur l'excellence du service résidentiel" },
+        { "year": "5 ans", "event": "Virage majeur vers les secteurs commercial et industriel, avec l'obtention de contrats innovants sur la Rive-Sud" },
+        { "year": "10 ans", "event": "Consolidation de notre expertise en systèmes intérieurs et déploiement d'équipes spécialisées en gypse et colombage" },
+        { "year": "Aujourd'hui", "event": "Toujours en croissance" }
+      ]
+    },
+    "values": {
+      "badge": "Ce qui nous guide",
+      "title": "Nos Valeurs",
+      "items": [
+        { "title": "Excellence", "desc": "Des standards irréprochables guident chacune de nos décisions, de la conception à la livraison." },
+        { "title": "Fiabilité", "desc": "Nous tenons parole. Nos clients comptent sur nous pour respecter engagements, délais et budgets." },
+        { "title": "Ponctualité", "desc": "Un chantier livré en retard coûte cher. Nous maîtrisons nos échéanciers avec rigueur." },
+        { "title": "Collaboration", "desc": "Nous travaillons avec vous, pas juste pour vous. Communication ouverte à chaque étape." }
+      ]
+    },
+    "cta": {
+      "badge": "Travaillons ensemble",
+      "title": "Prêt à bâtir quelque chose?",
+      "desc": "Notre équipe est disponible pour discuter de votre projet et vous fournir une estimation gratuite sans engagement.",
+      "contact": "Contactez-nous",
+      "projects": "Voir nos réalisations"
+    }
+  },
+  "services": {
+    "hero": {
+      "badge": "Ce que nous faisons",
+      "subtitle": "Spécialistes en systèmes intérieurs — de la gestion de projet jusqu'à la location de main-d'œuvre qualifiée."
+    },
+    "items": [
+      {
+        "title": "Colombage métallique",
+        "desc": "Installation de systèmes de colombage métallique pour cloisons intérieures et murs extérieurs, offrant résistance, précision et rapidité d'exécution.",
+        "features": ["Cloisons non porteuses", "Murs extérieurs", "Structures complexes", "Conformité aux normes"]
+      },
+      {
+        "title": "Isolation & Insonorisation",
+        "desc": "Installation de systèmes d'isolation thermique et acoustique performants pour améliorer le confort et réduire les coûts énergétiques de vos bâtiments.",
+        "features": ["Isolation thermique", "Insonorisation acoustique", "Pare-vapeur", "Certification énergétique"]
+      },
+      {
+        "title": "Pose de gypse",
+        "desc": "Installation professionnelle de panneaux de gypse pour cloisons et plafonds, avec finitions soignées adaptées aux exigences commerciales et industrielles.",
+        "features": ["Cloisons intérieures", "Plafonds plats et en pente", "Murs courbes", "Finition prête à peindre"]
+      },
+      {
+        "title": "Plâtre",
+        "desc": "Application de plâtre traditionnel et contemporain pour des surfaces durables et esthétiques. Expertise reconnue sur chantiers commerciaux et institutionnels.",
+        "features": ["Plâtre traditionnel", "Enduits spéciaux", "Réparations et raccords", "Finitions texturées"]
+      },
+      {
+        "title": "Plafonds suspendus",
+        "desc": "Conception et installation de systèmes de plafonds suspendus acoustiques et décoratifs pour espaces commerciaux, bureaux et établissements institutionnels.",
+        "features": ["Plafonds acoustiques", "Grilles et tuiles", "Plafonds spéciaux", "Intégration mécanique"]
+      },
+      {
+        "title": "Traitement acoustique",
+        "desc": "Conception et installation de solutions acoustiques pour améliorer le confort sonore dans vos espaces résidentiels, commerciaux et industriels.",
+        "features": ["Panneaux acoustiques", "Plafond metallique", "Plafond de bois", "Solutions sur mesure"]
+      },
+      {
+        "title": "Gestion de projet",
+        "desc": "Planification, coordination et suivi rigoureux de vos chantiers du début à la fin. Votre interlocuteur unique qui gère chaque détail pour vous.",
+        "features": ["Planification et échéancier", "Coordination des sous-traitants", "Contrôle budgétaire", "Rapports d'avancement"]
+      },
+      {
+        "title": "Location de main-d'œuvre",
+        "desc": "Mise à disposition de travailleurs qualifiés et certifiés pour renforcer vos équipes selon vos besoins ponctuels ou à long terme, avec flexibilité totale.",
+        "features": ["Personnel certifié CCQ", "Flexibilité court/long terme", "Superviseurs disponibles", "Toutes spécialités"]
+      }
+    ],
+    "request": "Demander ce service",
+    "process": {
+      "badge": "Comment on travaille",
+      "title": "Notre Processus",
+      "steps": [
+        { "title": "Consultation", "desc": "Rencontre initiale gratuite pour comprendre vos besoins, votre budget et vos délais." },
+        { "title": "Planification", "desc": "Élaboration du plan de projet, des devis détaillés et de l'échéancier." },
+        { "title": "Exécution", "desc": "Réalisation des travaux avec supervision continue et communication régulière." },
+        { "title": "Livraison", "desc": "Remise des clés avec inspection finale, documentation et garanties complètes." }
+      ]
+    },
+    "cta": {
+      "title": "Besoin d'un service spécifique?",
+      "desc": "Nous offrons des solutions sur mesure adaptées à votre réalité.",
+      "btn": "Obtenir une soumission gratuite"
+    }
+  },
+  "projects": {
+    "hero": {
+      "badge": "Notre portfolio",
+      "subtitle": "Plus de 500 projets livrés avec excellence sur la Rive-Sud et à travers le Québec."
+    },
+    "filters": {
+      "all": "Tous les projets",
+      "commercial": "Commercial",
+      "industrial": "Industriel",
+      "renovation": "Rénovation"
+    },
+    "cta": {
+      "title": "Votre projet pourrait être ici",
+      "desc": "Parlons de ce que nous pouvons accomplir ensemble.",
+      "btn": "Lancer mon projet"
+    }
+  },
+  "contact": {
+    "hero": {
+      "badge": "Travaillons ensemble",
+      "subtitle": "Soumission gratuite et sans engagement. Notre équipe vous répond sous 24 heures ouvrables."
+    },
+    "cards": {
+      "address": { "title": "Adresse", "line": "Rive-Sud de Montréal", "link": "Voir sur la carte" },
+      "phone": { "title": "Téléphone", "link": "Appeler maintenant" },
+      "email": { "title": "Courriel", "link": "Envoyer un courriel" },
+      "hours": { "title": "Heures d'ouverture", "line1": "Lundi – Vendredi", "line2": "8h00 à 17h00" }
+    },
+    "form": {
+      "title": "Demande de soumission",
+      "subtitle": "Remplissez le formulaire ci-dessous et nous vous contacterons dans les plus brefs délais.",
+      "name": "Nom complet *",
+      "namePlaceholder": "Jean Tremblay",
+      "phone": "Téléphone",
+      "phonePlaceholder": "450-000-0000",
+      "email": "Courriel *",
+      "emailPlaceholder": "jean.tremblay@exemple.com",
+      "type": "Type de projet",
+      "typeDefault": "Sélectionnez un type de projet",
+      "types": [
+        "Construction commerciale",
+        "Construction industrielle",
+        "Systèmes intérieurs",
+        "Rénovation & agrandissement",
+        "Gestion de chantier",
+        "Design & planification",
+        "Autre"
+      ],
+      "message": "Détails du projet *",
+      "messagePlaceholder": "Décrivez votre projet — type de travaux, superficie approximative, localisation, délais souhaités...",
+      "submit": "Envoyer la demande",
+      "note": "En soumettant ce formulaire, votre application de courriel s'ouvrira avec les informations pré-remplies.",
+      "emailSubject": "Demande de soumission"
+    },
+    "phoneCard": {
+      "badge": "Préférez appeler?",
+      "title": "Réponse immédiate",
+      "desc": "Notre équipe est disponible du lundi au vendredi, de 8h à 17h."
+    }
+  },
+  "careers": {
+    "hero": {
+      "badge": "Rejoignez l'équipe",
+      "title1": "À la recherche",
+      "title2": "d'un emploi?",
+      "subtitle": "Envoyez-nous directement votre candidature. Nous sommes toujours à la recherche de travailleurs passionnés pour développer notre entreprise."
+    },
+    "intro": {
+      "badge": "Notre entreprise",
+      "title": "Construisez votre carrière avec nous",
+      "p1": "Étant un entrepreneur général spécialisé dans le système intérieur bien établi, nous sommes toujours à la recherche de travailleurs pour continuer de développer notre entreprise.",
+      "p2": "Venez transmettre votre expérience ou apprendre au sein d'une équipe dynamique. Que vous soyez un professionnel aguerri ou en début de carrière, nous avons une place pour vous.",
+      "perks": [
+        "Équipe dynamique et soudée",
+        "Projets variés et stimulants",
+        "Formation et développement professionnel",
+        "Environnement de travail respectueux",
+        "Normes SST rigoureusement respectées",
+        "Stabilité et croissance de l'entreprise"
+      ],
+      "btn": "Envoyer ma candidature"
+    },
+    "positions": {
+      "badge": "Postes disponibles",
+      "title": "Emplois disponibles",
+      "items": [
+        { "title": "Poseur de système intérieur", "desc": "Installation de gypse, cloisons, plafonds suspendus et systèmes intérieurs." },
+        { "title": "Plâtrier", "desc": "Application de plâtre traditionnel et contemporain sur projets commerciaux et institutionnels." },
+        { "title": "Charpentier", "desc": "Construction de structures bois et acier pour tous types de projets de construction." }
+      ],
+      "apply": "Postuler"
+    },
+    "contact": {
+      "badge": "Contactez-nous",
+      "title": "Faites le premier pas aujourd'hui",
+      "desc": "Contactez-nous dès aujourd'hui pour vous informer sur nos perspectives d'emploi, par téléphone ou par courriel. Nous serons heureux de discuter de votre profil et des opportunités disponibles.",
+      "emailLabel": "Courriel",
+      "phoneLabel": "Téléphone"
+    },
+    "apply": {
+      "title": "Pour postuler",
+      "desc": "Envoyez-nous votre CV et une brève présentation à",
+      "descEnd": "en mentionnant le poste qui vous intéresse. Nous communiquerons avec vous dans les plus brefs délais.",
+      "steps": [
+        "Mentionnez le poste visé",
+        "Joignez votre CV à jour",
+        "Décrivez brièvement votre expérience"
+      ],
+      "btn": "Envoyer ma candidature"
+    },
+    "bottom": {
+      "badge": "Travaillons ensemble",
+      "title": "Des questions sur nos services?",
+      "desc": "Notre équipe est disponible pour répondre à toutes vos questions et vous orienter vers les bonnes ressources.",
+      "contactBtn": "Page contact",
+      "aboutBtn": "En savoir plus sur BCM"
+    }
+  }
+}

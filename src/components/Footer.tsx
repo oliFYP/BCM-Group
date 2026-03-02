@@ -1,28 +1,17 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Facebook, ArrowRight } from "lucide-react";
 import bcmLogo from "../assets/BCM_New.png";
+import { useLanguage } from "../i18n/LanguageContext";
 
-const serviceLinks = [
-  "Gestion de projet",
-  "Pose de gypse",
-  "Charpente",
-  "Plâtre",
-  "Colombage métallique",
-  "Isolation & Insonorisation",
-  "Plafonds suspendus",
-  "Location de main-d'œuvre",
-];
-
-const companyLinks = [
-  { label: "À Propos", to: "/about" },
-  { label: "Nos Services", to: "/services" },
-  { label: "Nos Projets", to: "/projects" },
-  { label: "Carrières", to: "/about" },
-  { label: "Contact", to: "/contact" },
-];
+const companyRoutes = ["/about", "/services", "/projects", "/about", "/contact"];
 
 export default function Footer() {
   const year = new Date().getFullYear();
+  const { t, ta } = useLanguage();
+
+  const serviceLinks = ta<string>("footer.serviceLinks");
+  const companyLinks = ta<string>("footer.companyLinks");
+  const certifications = ta<string>("footer.certifications");
 
   return (
     <footer className="bg-bcm-coal border-t border-white/5">
@@ -31,15 +20,13 @@ export default function Footer() {
         <div className="container-xl py-10 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <p className="font-['Barlow_Condensed'] font-black text-2xl md:text-3xl uppercase text-white leading-tight">
-              Prêt à démarrer votre projet?
+              {t("footer.cta.title")}
             </p>
-            <p className="text-white/70 text-sm mt-1">
-              Contactez-nous pour une soumission gratuite et sans engagement.
-            </p>
+            <p className="text-white/70 text-sm mt-1">{t("footer.cta.subtitle")}</p>
           </div>
           <div className="flex flex-wrap gap-3 flex-shrink-0">
             <Link to="/contact" className="btn-ghost">
-              Obtenir une soumission <ArrowRight size={14} />
+              {t("footer.cta.btn")} <ArrowRight size={14} />
             </Link>
             <a href="tel:450-741-1351" className="btn-ghost">
               <Phone size={13} />
@@ -54,45 +41,24 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-12 gap-10 mb-12">
           {/* Brand */}
           <div className="lg:col-span-4">
-            <img
-              src={bcmLogo}
-              alt="Groupe B.C.M."
-              className="h-14 w-auto mb-5"
-            />
+            <img src={bcmLogo} alt="Groupe B.C.M." className="h-14 w-auto mb-5" />
             <p className="text-bcm-silver text-sm leading-relaxed mb-6 max-w-xs">
-              Entrepreneur général spécialisé en systèmes intérieurs depuis plus
-              de 10 ans. Excellence, fiabilité et innovation à chaque projet.
+              {t("footer.brand.desc")}
             </p>
             <div className="space-y-3">
               {[
-                {
-                  Icon: MapPin,
-                  text: "Rive-Sud de Montréal",
-                  href: null,
-                },
+                { Icon: MapPin, text: t("footer.brand.location"), href: null },
                 { Icon: Phone, text: "450-741-1351", href: "tel:450-741-1351" },
-                {
-                  Icon: Mail,
-                  text: "info@groupe-bcm.com",
-                  href: "mailto:info@groupe-bcm.com",
-                },
+                { Icon: Mail, text: "info@groupe-bcm.com", href: "mailto:info@groupe-bcm.com" },
               ].map(({ Icon, text, href }, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <Icon
-                    size={14}
-                    className="text-bcm-red flex-shrink-0 mt-0.5"
-                  />
+                  <Icon size={14} className="text-bcm-red flex-shrink-0 mt-0.5" />
                   {href ? (
-                    <a
-                      href={href}
-                      className="text-bcm-silver hover:text-white text-xs leading-relaxed transition-colors"
-                    >
+                    <a href={href} className="text-bcm-silver hover:text-white text-xs leading-relaxed transition-colors">
                       {text}
                     </a>
                   ) : (
-                    <span className="text-bcm-silver text-xs leading-relaxed">
-                      {text}
-                    </span>
+                    <span className="text-bcm-silver text-xs leading-relaxed">{text}</span>
                   )}
                 </div>
               ))}
@@ -102,15 +68,12 @@ export default function Footer() {
           {/* Services */}
           <div className="lg:col-span-3">
             <h4 className="font-['Barlow_Condensed'] font-bold text-[10px] tracking-[0.22em] uppercase text-white mb-5 pb-3 border-b border-white/5">
-              Services
+              {t("footer.sections.services")}
             </h4>
             <ul className="space-y-2.5">
-              {serviceLinks.map((link) => (
-                <li key={link}>
-                  <Link
-                    to="/services"
-                    className="text-bcm-silver hover:text-white text-xs transition-colors flex items-center gap-2 group"
-                  >
+              {serviceLinks.map((link, i) => (
+                <li key={i}>
+                  <Link to="/services" className="text-bcm-silver hover:text-white text-xs transition-colors flex items-center gap-2 group">
                     <span className="w-0 h-px bg-bcm-red group-hover:w-4 transition-all duration-200 flex-shrink-0" />
                     {link}
                   </Link>
@@ -122,15 +85,12 @@ export default function Footer() {
           {/* Company */}
           <div className="lg:col-span-2">
             <h4 className="font-['Barlow_Condensed'] font-bold text-[10px] tracking-[0.22em] uppercase text-white mb-5 pb-3 border-b border-white/5">
-              Entreprise
+              {t("footer.sections.company")}
             </h4>
             <ul className="space-y-2.5">
-              {companyLinks.map(({ label, to }) => (
-                <li key={label}>
-                  <Link
-                    to={to}
-                    className="text-bcm-silver hover:text-white text-xs transition-colors flex items-center gap-2 group"
-                  >
+              {companyLinks.map((label, i) => (
+                <li key={i}>
+                  <Link to={companyRoutes[i]} className="text-bcm-silver hover:text-white text-xs transition-colors flex items-center gap-2 group">
                     <span className="w-0 h-px bg-bcm-red group-hover:w-4 transition-all duration-200 flex-shrink-0" />
                     {label}
                   </Link>
@@ -139,14 +99,14 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Certifications / trust */}
+          {/* Certifications */}
           <div className="lg:col-span-3">
             <h4 className="font-['Barlow_Condensed'] font-bold text-[10px] tracking-[0.22em] uppercase text-white mb-5 pb-3 border-b border-white/5">
-              Certifications
+              {t("footer.sections.certifications")}
             </h4>
             <div className="space-y-2">
-              {["Licence RBQ", "CCQ Certifié", "SST Conforme"].map((cert) => (
-                <div key={cert} className="flex items-center gap-2">
+              {certifications.map((cert, i) => (
+                <div key={i} className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-bcm-red rounded-full flex-shrink-0" />
                   <span className="text-bcm-silver text-xs">{cert}</span>
                 </div>
@@ -155,11 +115,11 @@ export default function Footer() {
 
             <div className="mt-6">
               <p className="font-['Barlow_Condensed'] text-[10px] font-bold tracking-[0.2em] uppercase text-white mb-3">
-                Suivez-nous
+                {t("footer.sections.follow")}
               </p>
               <div className="flex gap-2">
                 <a
-                  href="https://www.facebook.com/groupebcm"
+                  href="https://www.facebook.com/groupebcm604"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"
@@ -175,20 +135,14 @@ export default function Footer() {
         {/* Bottom */}
         <div className="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-bcm-muted text-[11px]">
-            © {year} Groupe BCM Inc. Tous droits réservés.
+            © {year} Groupe BCM Inc. {t("footer.legal.rights")}
           </p>
           <div className="flex gap-6">
-            {["Politique de confidentialité", "Conditions d'utilisation"].map(
-              (t) => (
-                <a
-                  key={t}
-                  href="#"
-                  className="text-bcm-muted hover:text-bcm-silver text-[11px] transition-colors"
-                >
-                  {t}
-                </a>
-              ),
-            )}
+            {[t("footer.legal.privacy"), t("footer.legal.terms")].map((label) => (
+              <a key={label} href="#" className="text-bcm-muted hover:text-bcm-silver text-[11px] transition-colors">
+                {label}
+              </a>
+            ))}
           </div>
         </div>
       </div>
