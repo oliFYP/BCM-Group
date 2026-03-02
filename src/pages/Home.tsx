@@ -48,7 +48,11 @@ export default function Home() {
     { Icon: Clock, title: t("home.values.punctuality.title"), desc: t("home.values.punctuality.desc") },
   ];
 
-  const portfolioProjects = ta<{ title: string; cat: string; loc: string }>("home.portfolio.projects");
+  const portfolioProjects = [
+    { title: "Vieux Duluth", loc: "Saint-Basile", cat: t("projects.filters.renovation") },
+    { title: "AAB", loc: "Saint-Jean-Iberville", cat: t("projects.filters.industrial") },
+    { title: "HUP", loc: "Delson", cat: t("projects.filters.renovation") },
+  ];
 
   return (
     <>
@@ -290,28 +294,27 @@ export default function Home() {
               <Link
                 key={i}
                 to="/projects"
-                className="group relative overflow-hidden border border-white/5 hover:border-bcm-red/30 transition-colors block"
+                className="group relative overflow-hidden bg-bcm-coal block"
               >
-                <div className="relative h-56 overflow-hidden">
+                <div className="aspect-[4/3] overflow-hidden">
                   <img
                     src={projectImgs[i]}
                     alt={title}
-                    className="w-full h-full object-cover opacity-75 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-bcm-dark via-bcm-dark/30 to-transparent" />
-                  <span className="absolute top-4 left-4 bg-bcm-red font-['Barlow_Condensed'] font-bold text-[10px] tracking-widest uppercase text-white px-3 py-1">
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
+                <div className="absolute bottom-0 left-0 p-6 pointer-events-none">
+                  <span className="inline-block bg-bcm-red text-white font-display font-bold text-[9px] tracking-[0.2em] uppercase px-2.5 py-1 mb-3">
                     {cat}
                   </span>
-                </div>
-                <div className="bg-bcm-coal p-5">
-                  <h3 className="font-['Barlow_Condensed'] font-bold text-base uppercase tracking-wide text-white group-hover:text-bcm-red transition-colors leading-tight mb-1">
+                  <p className="font-display font-black text-xl uppercase tracking-widest text-white leading-tight mb-1">
                     {title}
-                  </h3>
-                  <p className="text-bcm-muted text-[11px] font-['Barlow_Condensed'] tracking-wider">
+                  </p>
+                  <p className="text-bcm-silver text-xs tracking-[0.15em] uppercase font-display">
                     {loc}
                   </p>
                 </div>
-                <div className="h-[2px] w-0 bg-bcm-red group-hover:w-full transition-all duration-500" />
               </Link>
             ))}
           </div>
