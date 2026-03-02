@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail, Facebook, ArrowRight } from "lucide-react";
+import { MapPin, Phone, Mail, Facebook, ArrowRight } from "lucide-react"; // eslint-disable-line
 import bcmLogo from "../assets/BCM_New.png";
 import { useLanguage } from "../i18n/LanguageContext";
 
@@ -138,11 +138,12 @@ export default function Footer() {
             © {year} Groupe BCM Inc. {t("footer.legal.rights")}
           </p>
           <div className="flex gap-6">
-            {[t("footer.legal.privacy"), t("footer.legal.terms")].map((label) => (
-              <a key={label} href="#" className="text-bcm-muted hover:text-bcm-silver text-[11px] transition-colors">
-                {label}
-              </a>
-            ))}
+            <Link to="/privacy" className="text-bcm-muted hover:text-bcm-silver text-[11px] transition-colors">
+              {t("footer.legal.privacy")}
+            </Link>
+            <a href="#" className="text-bcm-muted hover:text-bcm-silver text-[11px] transition-colors">
+              {t("footer.legal.terms")}
+            </a>
           </div>
         </div>
       </div>
