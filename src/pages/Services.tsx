@@ -5,8 +5,8 @@ import gypse from "../assets/gypse.JPG";
 import platre from "../assets/platre.JPG";
 import plafond from "../assets/plafond.JPG";
 import colombage from "../assets/colombage.JPG";
-import gestion from "../assets/gestion.JPG";
 import isolation from "../assets/isolation.JPG";
+import gestion from "../assets/projets.jpeg";
 
 import {
   ClipboardList,

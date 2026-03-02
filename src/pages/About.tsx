@@ -17,7 +17,9 @@ export default function About() {
   const { t, ta } = useLanguage();
 
   const advantages = ta<string>("about.story.advantages");
-  const milestones = ta<{ year: string; event: string }>("about.timeline.milestones");
+  const milestones = ta<{ year: string; event: string }>(
+    "about.timeline.milestones",
+  );
   const valueItems = ta<{ title: string; desc: string }>("about.values.items");
 
   return (
@@ -57,7 +59,10 @@ export default function About() {
               <div className="space-y-3 mb-10">
                 {advantages.map((adv, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <CheckCircle2 size={17} className="text-bcm-red flex-shrink-0 mt-0.5" />
+                    <CheckCircle2
+                      size={17}
+                      className="text-bcm-red flex-shrink-0 mt-0.5"
+                    />
                     <span className="text-bcm-silver text-sm">{adv}</span>
                   </div>
                 ))}
@@ -81,10 +86,7 @@ export default function About() {
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <div className="border-l-4 border-bcm-red pl-4">
                     <p className="font-['Barlow_Condensed'] font-bold text-white text-lg uppercase tracking-wide leading-tight">
-                      Saint-Jean-sur-Richelieu, QC
-                    </p>
-                    <p className="text-bcm-silver text-xs mt-1 font-['Barlow_Condensed'] tracking-wider">
-                      Rive-Sud de Montréal
+                      Grand-Montréal, QC
                     </p>
                   </div>
                 </div>
@@ -143,7 +145,9 @@ export default function About() {
                   <h3 className="font-['Barlow_Condensed'] font-bold text-lg uppercase tracking-wide text-white mb-3 group-hover:text-bcm-red transition-colors">
                     {title}
                   </h3>
-                  <p className="text-bcm-silver text-sm leading-relaxed">{desc}</p>
+                  <p className="text-bcm-silver text-sm leading-relaxed">
+                    {desc}
+                  </p>
                 </div>
               );
             })}
@@ -154,9 +158,13 @@ export default function About() {
       {/* ─── CTA ──────────────────────────────────────────────── */}
       <section className="py-20 bg-bcm-dark border-t border-white/5">
         <div className="container-xl text-center">
-          <span className="label justify-center mb-5">{t("about.cta.badge")}</span>
+          <span className="label justify-center mb-5">
+            {t("about.cta.badge")}
+          </span>
           <h2 className="section-heading mb-4">{t("about.cta.title")}</h2>
-          <p className="text-bcm-silver mb-8 max-w-lg mx-auto">{t("about.cta.desc")}</p>
+          <p className="text-bcm-silver mb-8 max-w-lg mx-auto">
+            {t("about.cta.desc")}
+          </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link to="/contact" className="btn-red">
               {t("about.cta.contact")} <ArrowRight size={16} />
