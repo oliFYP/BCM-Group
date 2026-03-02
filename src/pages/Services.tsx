@@ -24,13 +24,33 @@ import {
 
 import { useLanguage } from "../i18n/LanguageContext";
 
-const serviceIcons: LucideIcon[] = [Grid3x3, Waves, Layers, PaintBucket, LayoutGrid, Hammer, ClipboardList, Users];
-const serviceImgs = [colombage, isolation, gypse, platre, plafond, accoustic, gestion, team3];
+const serviceIcons: LucideIcon[] = [
+  Grid3x3,
+  Waves,
+  Layers,
+  PaintBucket,
+  LayoutGrid,
+  Hammer,
+  ClipboardList,
+  Users,
+];
+const serviceImgs = [
+  colombage,
+  isolation,
+  gypse,
+  platre,
+  plafond,
+  accoustic,
+  gestion,
+  team3,
+];
 
 export default function Services() {
   const { t, ta } = useLanguage();
 
-  const services = ta<{ title: string; desc: string; features: string[] }>("services.items");
+  const services = ta<{ title: string; desc: string; features: string[] }>(
+    "services.items",
+  );
   const steps = ta<{ title: string; desc: string }>("services.process.steps");
 
   return (
@@ -42,7 +62,7 @@ export default function Services() {
         <div className="container-xl relative z-10">
           <span className="label mb-5">{t("services.hero.badge")}</span>
           <h1 className="page-title mb-4">
-            Nos
+            {t("nav.our")}
             <br />
             <span className="text-bcm-red">Services</span>
           </h1>
@@ -82,11 +102,16 @@ export default function Services() {
                     <h3 className="font-['Barlow_Condensed'] font-bold text-xl uppercase tracking-wide text-white mb-3 group-hover:text-bcm-red transition-colors">
                       {title}
                     </h3>
-                    <p className="text-bcm-silver text-sm leading-relaxed mb-5 flex-1">{desc}</p>
+                    <p className="text-bcm-silver text-sm leading-relaxed mb-5 flex-1">
+                      {desc}
+                    </p>
                     <ul className="space-y-1.5 mb-6">
                       {features.map((f, j) => (
                         <li key={j} className="flex items-center gap-2">
-                          <CheckCircle2 size={13} className="text-bcm-red flex-shrink-0" />
+                          <CheckCircle2
+                            size={13}
+                            className="text-bcm-red flex-shrink-0"
+                          />
                           <span className="text-bcm-muted text-xs">{f}</span>
                         </li>
                       ))}
@@ -128,7 +153,9 @@ export default function Services() {
                 <h4 className="font-['Barlow_Condensed'] font-bold text-lg uppercase tracking-wide text-white mb-3 group-hover:text-bcm-red transition-colors">
                   {title}
                 </h4>
-                <p className="text-bcm-silver text-sm leading-relaxed">{desc}</p>
+                <p className="text-bcm-silver text-sm leading-relaxed">
+                  {desc}
+                </p>
                 {i < steps.length - 1 && (
                   <ArrowRight
                     size={16}

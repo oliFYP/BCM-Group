@@ -10,11 +10,31 @@ import { useLanguage } from "../i18n/LanguageContext";
 
 type Cat = "all" | "commercial" | "industrial" | "renovation";
 
-const projects: { name: string; location: string; cat: Cat; images: string[] }[] = [
-  { name: "Vieux Duluth", location: "Saint-Basile", cat: "renovation", images: [imgVieuxDuluth] },
+const projects: {
+  name: string;
+  location: string;
+  cat: Cat;
+  images: string[];
+}[] = [
+  {
+    name: "Vieux Duluth",
+    location: "Saint-Basile",
+    cat: "renovation",
+    images: [imgVieuxDuluth],
+  },
   { name: "HUP", location: "Delson", cat: "renovation", images: [imgHup] },
-  { name: "AAB", location: "Saint-Jean-Iberville", cat: "industrial", images: [imgAab] },
-  { name: "Kubota", location: "Saint-Jean", cat: "commercial", images: [imgKubota1, imgKubota2] },
+  {
+    name: "AAB",
+    location: "Saint-Jean-Iberville",
+    cat: "industrial",
+    images: [imgAab],
+  },
+  {
+    name: "Kubota",
+    location: "Saint-Jean",
+    cat: "commercial",
+    images: [imgKubota1, imgKubota2],
+  },
 ];
 
 function ProjectCard({
@@ -69,7 +89,10 @@ function ProjectCard({
             {images.map((_, i) => (
               <button
                 key={i}
-                onClick={(e) => { e.stopPropagation(); setIdx(i); }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setIdx(i);
+                }}
                 className={`w-1.5 h-1.5 rounded-full transition-colors ${i === idx ? "bg-bcm-red" : "bg-white/40"}`}
               />
             ))}
@@ -113,9 +136,9 @@ export default function Projects() {
         <div className="container-xl relative z-10">
           <span className="label mb-5">{t("projects.hero.badge")}</span>
           <h1 className="page-title mb-4">
-            Nos
+            {t("nav.our")}
             <br />
-            <span className="text-bcm-red">Réalisations</span>
+            <span className="text-bcm-red">{t("nav.realisations")}</span>
           </h1>
           <p className="text-bcm-silver text-lg max-w-xl leading-relaxed font-light">
             {t("projects.hero.subtitle")}

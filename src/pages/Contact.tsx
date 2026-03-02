@@ -1,11 +1,5 @@
 import { useState } from "react";
-import {
-  MapPin,
-  Phone,
-  Mail,
-  Clock,
-  ArrowRight,
-} from "lucide-react";
+import { MapPin, Phone, Mail, Clock, ArrowRight } from "lucide-react";
 import { useLanguage } from "../i18n/LanguageContext";
 
 export default function Contact() {
@@ -19,7 +13,9 @@ export default function Contact() {
   });
 
   const onChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
   ) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
   const onSubmit = (e: React.FormEvent) => {
@@ -75,9 +71,9 @@ export default function Contact() {
         <div className="container-xl relative z-10">
           <span className="label mb-5">{t("contact.hero.badge")}</span>
           <h1 className="page-title mb-4">
-            Contactez
+            {t("nav.contact")}
             <br />
-            <span className="text-bcm-red">-nous</span>
+            <span className="text-bcm-red">-{t("nav.us")}</span>
           </h1>
           <p className="text-bcm-silver text-lg max-w-xl leading-relaxed font-light">
             {t("contact.hero.subtitle")}
@@ -100,7 +96,10 @@ export default function Contact() {
                 </div>
                 <p className="form-label mb-3">{title}</p>
                 {lines.map((line, i) => (
-                  <p key={i} className={`text-sm ${i === 0 ? "text-white font-semibold" : "text-bcm-silver"}`}>
+                  <p
+                    key={i}
+                    className={`text-sm ${i === 0 ? "text-white font-semibold" : "text-bcm-silver"}`}
+                  >
                     {line}
                   </p>
                 ))}
@@ -127,12 +126,16 @@ export default function Contact() {
               <h2 className="font-display font-bold text-2xl uppercase tracking-wide text-white mb-1">
                 {t("contact.form.title")}
               </h2>
-              <p className="text-bcm-silver text-sm mb-8">{t("contact.form.subtitle")}</p>
+              <p className="text-bcm-silver text-sm mb-8">
+                {t("contact.form.subtitle")}
+              </p>
 
               <form onSubmit={onSubmit} className="space-y-5">
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="form-label">{t("contact.form.name")}</label>
+                    <label className="form-label">
+                      {t("contact.form.name")}
+                    </label>
                     <input
                       name="name"
                       type="text"
@@ -144,7 +147,9 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <label className="form-label">{t("contact.form.phone")}</label>
+                    <label className="form-label">
+                      {t("contact.form.phone")}
+                    </label>
                     <input
                       name="phone"
                       type="tel"
@@ -157,7 +162,9 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label className="form-label">{t("contact.form.email")}</label>
+                  <label className="form-label">
+                    {t("contact.form.email")}
+                  </label>
                   <input
                     name="email"
                     type="email"
@@ -185,7 +192,9 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label className="form-label">{t("contact.form.message")}</label>
+                  <label className="form-label">
+                    {t("contact.form.message")}
+                  </label>
                   <textarea
                     name="message"
                     required
@@ -232,7 +241,9 @@ export default function Contact() {
                 <div className="absolute -top-8 -right-8 w-28 h-28 bg-white/5 rounded-full" />
                 <div className="absolute -bottom-6 -left-6 w-20 h-20 bg-black/10 rounded-full" />
                 <div className="relative z-10">
-                  <p className="form-label text-white/60 mb-1">{t("contact.phoneCard.badge")}</p>
+                  <p className="form-label text-white/60 mb-1">
+                    {t("contact.phoneCard.badge")}
+                  </p>
                   <h3 className="font-display font-black text-2xl uppercase text-white mb-2 leading-tight">
                     {t("contact.phoneCard.title")}
                   </h3>

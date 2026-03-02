@@ -7,7 +7,10 @@
     "careers": "Careers",
     "contact": "Contact",
     "cta": "Free Quote",
-    "getQuote": "Get a Quote"
+    "getQuote": "Get a Quote",
+    "our": "Our",
+    "realisations": "Achievements",
+    "us": "Us"
   },
   "footer": {
     "cta": {
@@ -72,9 +75,18 @@
       "btn": "Learn more about BCM"
     },
     "values": {
-      "excellence": { "title": "Excellence", "desc": "Uncompromising standards at every stage." },
-      "reliability": { "title": "Reliability", "desc": "A solid partner you can count on." },
-      "punctuality": { "title": "Punctuality", "desc": "Deadlines and budgets always respected." }
+      "excellence": {
+        "title": "Excellence",
+        "desc": "Uncompromising standards at every stage."
+      },
+      "reliability": {
+        "title": "Reliability",
+        "desc": "A solid partner you can count on."
+      },
+      "punctuality": {
+        "title": "Punctuality",
+        "desc": "Deadlines and budgets always respected."
+      }
     },
     "servicesSection": {
       "badge": "What we do",
@@ -104,9 +116,21 @@
       "title": "Recent Projects",
       "viewAll": "View all projects",
       "projects": [
-        { "title": "Promenade Commercial Centre", "cat": "Commercial", "loc": "Saint-Jean-sur-Richelieu" },
-        { "title": "Production Plant", "cat": "Industrial", "loc": "Longueuil" },
-        { "title": "Prestige Hotel Renovation", "cat": "Renovation", "loc": "Quebec City" }
+        {
+          "title": "Promenade Commercial Centre",
+          "cat": "Commercial",
+          "loc": "Saint-Jean-sur-Richelieu"
+        },
+        {
+          "title": "Production Plant",
+          "cat": "Industrial",
+          "loc": "Longueuil"
+        },
+        {
+          "title": "Prestige Hotel Renovation",
+          "cat": "Renovation",
+          "loc": "Quebec City"
+        }
       ]
     },
     "cta": {
@@ -138,9 +162,18 @@
     "timeline": {
       "title": "Our Journey",
       "milestones": [
-        { "year": "Founded", "event": "Creation of Groupe B.C.M. in Saint-Jean-sur-Richelieu, focused on excellence in residential service" },
-        { "year": "5 years", "event": "Major shift towards commercial and industrial sectors, securing innovative contracts on the South Shore" },
-        { "year": "10 years", "event": "Consolidation of our interior systems expertise and deployment of specialized drywall and framing teams" },
+        {
+          "year": "Founded",
+          "event": "Creation of Groupe B.C.M. in Saint-Jean-sur-Richelieu, focused on excellence in residential service"
+        },
+        {
+          "year": "5 years",
+          "event": "Major shift towards commercial and industrial sectors, securing innovative contracts on the South Shore"
+        },
+        {
+          "year": "10 years",
+          "event": "Consolidation of our interior systems expertise and deployment of specialized drywall and framing teams"
+        },
         { "year": "Today", "event": "Still growing" }
       ]
     },
@@ -148,10 +181,22 @@
       "badge": "What guides us",
       "title": "Our Values",
       "items": [
-        { "title": "Excellence", "desc": "Uncompromising standards guide every decision, from design to delivery." },
-        { "title": "Reliability", "desc": "We keep our word. Our clients count on us to honour commitments, deadlines and budgets." },
-        { "title": "Punctuality", "desc": "A project delivered late is costly. We master our schedules with rigour." },
-        { "title": "Collaboration", "desc": "We work with you, not just for you. Open communication at every stage." }
+        {
+          "title": "Excellence",
+          "desc": "Uncompromising standards guide every decision, from design to delivery."
+        },
+        {
+          "title": "Reliability",
+          "desc": "We keep our word. Our clients count on us to honour commitments, deadlines and budgets."
+        },
+        {
+          "title": "Punctuality",
+          "desc": "A project delivered late is costly. We master our schedules with rigour."
+        },
+        {
+          "title": "Collaboration",
+          "desc": "We work with you, not just for you. Open communication at every stage."
+        }
       ]
     },
     "cta": {
@@ -171,42 +216,82 @@
       {
         "title": "Metal Framing",
         "desc": "Installation of metal framing systems for interior partitions and exterior walls, offering strength, precision and fast execution.",
-        "features": ["Non-load-bearing partitions", "Exterior walls", "Complex structures", "Code compliance"]
+        "features": [
+          "Non-load-bearing partitions",
+          "Exterior walls",
+          "Complex structures",
+          "Code compliance"
+        ]
       },
       {
         "title": "Insulation & Soundproofing",
         "desc": "Installation of high-performance thermal and acoustic insulation systems to improve comfort and reduce energy costs in your buildings.",
-        "features": ["Thermal insulation", "Acoustic soundproofing", "Vapour barrier", "Energy certification"]
+        "features": [
+          "Thermal insulation",
+          "Acoustic soundproofing",
+          "Vapour barrier",
+          "Energy certification"
+        ]
       },
       {
         "title": "Drywall Installation",
         "desc": "Professional installation of drywall panels for partitions and ceilings, with careful finishes adapted to commercial and industrial requirements.",
-        "features": ["Interior partitions", "Flat and sloped ceilings", "Curved walls", "Paint-ready finish"]
+        "features": [
+          "Interior partitions",
+          "Flat and sloped ceilings",
+          "Curved walls",
+          "Paint-ready finish"
+        ]
       },
       {
         "title": "Plastering",
         "desc": "Application of traditional and contemporary plaster for durable and aesthetic surfaces. Recognized expertise on commercial and institutional projects.",
-        "features": ["Traditional plaster", "Special coatings", "Repairs and patching", "Textured finishes"]
+        "features": [
+          "Traditional plaster",
+          "Special coatings",
+          "Repairs and patching",
+          "Textured finishes"
+        ]
       },
       {
         "title": "Suspended Ceilings",
         "desc": "Design and installation of acoustic and decorative suspended ceiling systems for commercial spaces, offices and institutional establishments.",
-        "features": ["Acoustic ceilings", "Grids and tiles", "Special ceilings", "Mechanical integration"]
+        "features": [
+          "Acoustic ceilings",
+          "Grids and tiles",
+          "Special ceilings",
+          "Mechanical integration"
+        ]
       },
       {
         "title": "Acoustic Treatment",
         "desc": "Design and installation of acoustic solutions to improve sound comfort in your residential, commercial and industrial spaces.",
-        "features": ["Acoustic panels", "Metal ceiling", "Wood ceiling", "Custom solutions"]
+        "features": [
+          "Acoustic panels",
+          "Metal ceiling",
+          "Wood ceiling",
+          "Custom solutions"
+        ]
       },
       {
         "title": "Project Management",
         "desc": "Rigorous planning, coordination and monitoring of your projects from start to finish. Your single point of contact managing every detail for you.",
-        "features": ["Planning and scheduling", "Subcontractor coordination", "Budget control", "Progress reports"]
+        "features": [
+          "Planning and scheduling",
+          "Subcontractor coordination",
+          "Budget control",
+          "Progress reports"
+        ]
       },
       {
         "title": "Labour Rental",
         "desc": "Provision of qualified and certified workers to reinforce your teams for short or long-term needs, with total flexibility.",
-        "features": ["CCQ-certified staff", "Short/long-term flexibility", "Supervisors available", "All specialties"]
+        "features": [
+          "CCQ-certified staff",
+          "Short/long-term flexibility",
+          "Supervisors available",
+          "All specialties"
+        ]
       }
     ],
     "request": "Request this service",
@@ -214,10 +299,22 @@
       "badge": "How we work",
       "title": "Our Process",
       "steps": [
-        { "title": "Consultation", "desc": "Free initial meeting to understand your needs, budget and deadlines." },
-        { "title": "Planning", "desc": "Development of the project plan, detailed estimates and schedule." },
-        { "title": "Execution", "desc": "Work carried out with continuous supervision and regular communication." },
-        { "title": "Delivery", "desc": "Handover with final inspection, documentation and full warranties." }
+        {
+          "title": "Consultation",
+          "desc": "Free initial meeting to understand your needs, budget and deadlines."
+        },
+        {
+          "title": "Planning",
+          "desc": "Development of the project plan, detailed estimates and schedule."
+        },
+        {
+          "title": "Execution",
+          "desc": "Work carried out with continuous supervision and regular communication."
+        },
+        {
+          "title": "Delivery",
+          "desc": "Handover with final inspection, documentation and full warranties."
+        }
       ]
     },
     "cta": {
@@ -249,10 +346,18 @@
       "subtitle": "Free, no-obligation quote. Our team responds within 24 business hours."
     },
     "cards": {
-      "address": { "title": "Address", "line": "South Shore of Montreal", "link": "View on map" },
+      "address": {
+        "title": "Address",
+        "line": "South Shore of Montreal",
+        "link": "View on map"
+      },
       "phone": { "title": "Phone", "link": "Call now" },
       "email": { "title": "Email", "link": "Send an email" },
-      "hours": { "title": "Business Hours", "line1": "Monday – Friday", "line2": "8:00 AM to 5:00 PM" }
+      "hours": {
+        "title": "Business Hours",
+        "line1": "Monday – Friday",
+        "line2": "8:00 AM to 5:00 PM"
+      }
     },
     "form": {
       "title": "Quote Request",
@@ -312,9 +417,18 @@
       "badge": "Available positions",
       "title": "Job openings",
       "items": [
-        { "title": "Interior Systems Installer", "desc": "Installation of drywall, partitions, suspended ceilings and interior systems." },
-        { "title": "Plasterer", "desc": "Application of traditional and contemporary plaster on commercial and institutional projects." },
-        { "title": "Carpenter", "desc": "Construction of wood and steel structures for all types of construction projects." }
+        {
+          "title": "Interior Systems Installer",
+          "desc": "Installation of drywall, partitions, suspended ceilings and interior systems."
+        },
+        {
+          "title": "Plasterer",
+          "desc": "Application of traditional and contemporary plaster on commercial and institutional projects."
+        },
+        {
+          "title": "Carpenter",
+          "desc": "Construction of wood and steel structures for all types of construction projects."
+        }
       ],
       "apply": "Apply"
     },
