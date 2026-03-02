@@ -7,8 +7,8 @@ import {
   Users,
   ArrowRight,
 } from "lucide-react";
+import gestion from "../assets/projets.jpeg";
 
-import team7 from "../assets/7.jpg";
 import { useLanguage } from "../i18n/LanguageContext";
 
 const valueIcons = [Award, Shield, Clock, Users];
@@ -78,7 +78,7 @@ export default function About() {
             <div className="space-y-6">
               <div className="relative overflow-hidden border border-white/5">
                 <img
-                  src={team7}
+                  src={gestion}
                   alt="Chantier Groupe B.C.M."
                   className="w-full h-72 object-cover opacity-80"
                 />
