@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Phone, Mail, CheckCircle2 } from "lucide-react";
 import { useLanguage } from "../i18n/LanguageContext";
+import career from "../assets/career.jpeg";
 
 export default function Careers() {
   const { t, ta } = useLanguage();
 
   const perks = ta<string>("careers.intro.perks");
-  const positions = ta<{ title: string; desc: string }>("careers.positions.items");
+  const positions = ta<{ title: string; desc: string }>(
+    "careers.positions.items",
+  );
   const applySteps = ta<string>("careers.apply.steps");
 
   return (
@@ -36,14 +39,23 @@ export default function Careers() {
             <div>
               <span className="label mb-5">{t("careers.intro.badge")}</span>
               <div className="red-bar mb-6" />
-              <h2 className="section-heading mb-6">{t("careers.intro.title")}</h2>
-              <p className="text-bcm-silver leading-relaxed mb-5">{t("careers.intro.p1")}</p>
-              <p className="text-bcm-silver leading-relaxed mb-8">{t("careers.intro.p2")}</p>
+              <h2 className="section-heading mb-6">
+                {t("careers.intro.title")}
+              </h2>
+              <p className="text-bcm-silver leading-relaxed mb-5">
+                {t("careers.intro.p1")}
+              </p>
+              <p className="text-bcm-silver leading-relaxed mb-8">
+                {t("careers.intro.p2")}
+              </p>
 
               <div className="space-y-3 mb-10">
                 {perks.map((perk, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <CheckCircle2 size={17} className="text-bcm-red flex-shrink-0 mt-0.5" />
+                    <CheckCircle2
+                      size={17}
+                      className="text-bcm-red flex-shrink-0 mt-0.5"
+                    />
                     <span className="text-bcm-silver text-sm">{perk}</span>
                   </div>
                 ))}
@@ -58,7 +70,7 @@ export default function Careers() {
             {/* Right — image */}
             <div className="relative overflow-hidden border border-white/5">
               <img
-                src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=900"
+                src={career}
                 alt="Équipe Groupe B.C.M. sur chantier"
                 className="w-full h-72 object-cover opacity-80"
               />
@@ -96,7 +108,9 @@ export default function Careers() {
                 <h3 className="md:col-span-4 font-['Barlow_Condensed'] font-bold text-xl uppercase tracking-wide text-white group-hover:text-bcm-red transition-colors leading-snug">
                   {title}
                 </h3>
-                <p className="md:col-span-5 text-bcm-silver text-sm leading-relaxed">{desc}</p>
+                <p className="md:col-span-5 text-bcm-silver text-sm leading-relaxed">
+                  {desc}
+                </p>
                 <div className="md:col-span-2 flex justify-end">
                   <a
                     href="mailto:info@groupe-bcm.com"
@@ -120,8 +134,12 @@ export default function Careers() {
             <div>
               <span className="label mb-5">{t("careers.contact.badge")}</span>
               <div className="red-bar mb-6" />
-              <h2 className="section-heading mb-6">{t("careers.contact.title")}</h2>
-              <p className="text-bcm-silver leading-relaxed mb-8">{t("careers.contact.desc")}</p>
+              <h2 className="section-heading mb-6">
+                {t("careers.contact.title")}
+              </h2>
+              <p className="text-bcm-silver leading-relaxed mb-8">
+                {t("careers.contact.desc")}
+              </p>
 
               <div className="space-y-4">
                 <a
@@ -135,9 +153,14 @@ export default function Careers() {
                     <p className="font-['Barlow_Condensed'] text-[10px] tracking-[0.2em] uppercase text-white/30 mb-0.5">
                       {t("careers.contact.emailLabel")}
                     </p>
-                    <p className="text-white text-sm font-medium">info@groupe-bcm.com</p>
+                    <p className="text-white text-sm font-medium">
+                      info@groupe-bcm.com
+                    </p>
                   </div>
-                  <ArrowRight size={14} className="text-white/20 group-hover:text-bcm-red ml-auto transition-colors" />
+                  <ArrowRight
+                    size={14}
+                    className="text-white/20 group-hover:text-bcm-red ml-auto transition-colors"
+                  />
                 </a>
 
                 <a
@@ -155,7 +178,10 @@ export default function Careers() {
                       450-741-1351
                     </p>
                   </div>
-                  <ArrowRight size={14} className="text-white/20 group-hover:text-bcm-red ml-auto transition-colors" />
+                  <ArrowRight
+                    size={14}
+                    className="text-white/20 group-hover:text-bcm-red ml-auto transition-colors"
+                  />
                 </a>
               </div>
             </div>
@@ -184,12 +210,17 @@ export default function Careers() {
                         {String(i + 1).padStart(2, "0")}
                       </span>
                     </div>
-                    <span className="text-bcm-silver text-sm leading-relaxed mt-0.5">{step}</span>
+                    <span className="text-bcm-silver text-sm leading-relaxed mt-0.5">
+                      {step}
+                    </span>
                   </div>
                 ))}
               </div>
 
-              <a href="mailto:info@groupe-bcm.com" className="btn-red w-full justify-center">
+              <a
+                href="mailto:info@groupe-bcm.com"
+                className="btn-red w-full justify-center"
+              >
                 {t("careers.apply.btn")}
                 <ArrowRight size={15} />
               </a>
@@ -201,9 +232,13 @@ export default function Careers() {
       {/* ─── BOTTOM LINK ──────────────────────────────────────── */}
       <section className="py-20 bg-bcm-dark border-t border-white/5">
         <div className="container-xl text-center">
-          <span className="label justify-center mb-5">{t("careers.bottom.badge")}</span>
+          <span className="label justify-center mb-5">
+            {t("careers.bottom.badge")}
+          </span>
           <h2 className="section-heading mb-4">{t("careers.bottom.title")}</h2>
-          <p className="text-bcm-silver mb-8 max-w-lg mx-auto">{t("careers.bottom.desc")}</p>
+          <p className="text-bcm-silver mb-8 max-w-lg mx-auto">
+            {t("careers.bottom.desc")}
+          </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link to="/contact" className="btn-red">
               {t("careers.bottom.contactBtn")} <ArrowRight size={16} />
