@@ -241,12 +241,12 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="divide-y divide-white/[0.06]">
+          <div className="grid md:grid-cols-2 gap-px bg-white/[0.06]">
             {services.map(({ title, desc }, i) => (
               <Link
                 key={i}
                 to="/services"
-                className="group flex items-center justify-between py-7 hover:px-4 transition-all duration-300"
+                className="group flex items-center justify-between py-7 px-6 bg-[#0a0a0a] hover:bg-white/[0.02] transition-all duration-300"
               >
                 <div className="flex items-center gap-8">
                   <span

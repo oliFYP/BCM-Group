@@ -31,7 +31,7 @@
     "serviceLinks": [
       "Gestion de projet",
       "Pose de gypse",
-      "Charpente",
+      "Traitement accoustique",
       "Plâtre",
       "Colombage métallique",
       "Isolation & Insonorisation",
@@ -58,7 +58,7 @@
       "title1": "Construire",
       "title2": "l'Excellence",
       "title3": "depuis 10\u00a0ans",
-      "subtitle": "Spécialistes en systèmes intérieurs et construction générale. Résidentiel, commercial et industriel — de A à Z, dans les délais et selon votre budget.",
+      "subtitle": "Entrepreneur général spécialisé en systèmes intérieurs. Résidentiel, commercial et industriel — de A à Z, dans les délais et selon votre budget.",
       "servicesBtn": "Découvrir nos services",
       "quoteBtn": "Obtenir une soumission"
     },
@@ -109,6 +109,22 @@
       {
         "title": "Location de main-d'œuvre",
         "desc": "Personnel certifié CCQ disponible pour renforcer vos équipes selon vos besoins."
+      },
+      {
+        "title": "Isolation & Insonorisation",
+        "desc": "Systèmes d'isolation thermique et acoustique performants pour améliorer le confort et réduire les coûts énergétiques."
+      },
+      {
+        "title": "Plâtre",
+        "desc": "Application de plâtre traditionnel et contemporain pour des surfaces durables et esthétiques, sur chantiers commerciaux et institutionnels."
+      },
+      {
+        "title": "Plafonds suspendus",
+        "desc": "Systèmes de plafonds suspendus acoustiques et décoratifs pour espaces commerciaux, bureaux et établissements institutionnels."
+      },
+      {
+        "title": "Traitement acoustique",
+        "desc": "Solutions acoustiques pour améliorer le confort sonore dans vos espaces résidentiels, commerciaux et industriels."
       }
     ],
     "portfolio": {
@@ -135,7 +151,7 @@
     },
     "cta": {
       "title": "Parlons de votre projet",
-      "subtitle": "Soumission gratuite · Réponse en 24h · Saint-Jean-sur-Richelieu",
+      "subtitle": "Soumission gratuite. Grand Montréal",
       "write": "Nous écrire"
     }
   },
@@ -268,7 +284,7 @@
         "desc": "Conception et installation de solutions acoustiques pour améliorer le confort sonore dans vos espaces résidentiels, commerciaux et industriels.",
         "features": [
           "Panneaux acoustiques",
-          "Plafond metallique",
+          "Plafond métallique",
           "Plafond de bois",
           "Solutions sur mesure"
         ]
@@ -305,7 +321,7 @@
         },
         {
           "title": "Planification",
-          "desc": "Élaboration du plan de projet, des devis détaillés et de l'échéancier."
+          "desc": "Élaboration du plan de projet etde l'échéancier."
         },
         {
           "title": "Exécution",
@@ -326,7 +342,7 @@
   "projects": {
     "hero": {
       "badge": "Notre portfolio",
-      "subtitle": "Plus de 500 projets livrés avec excellence sur la Rive-Sud et à travers le Québec."
+      "subtitle": "Plusieurs projets livrés avec excellence sur la Rive-Sud et à travers le Québec."
     },
     "filters": {
       "all": "Tous les projets",
@@ -343,7 +359,7 @@
   "contact": {
     "hero": {
       "badge": "Travaillons ensemble",
-      "subtitle": "Soumission gratuite et sans engagement. Notre équipe vous répond sous 24 heures ouvrables."
+      "subtitle": "Soumission gratuite et sans engagement. "
     },
     "cards": {
       "address": {
@@ -427,7 +443,7 @@
         },
         {
           "title": "Charpentier",
-          "desc": "Construction de structures bois et acier pour tous types de projets de construction."
+          "desc": "Construction de structures d'acier pour tous types de projets de construction."
         }
       ],
       "apply": "Postuler"
