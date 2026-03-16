@@ -31,7 +31,7 @@
     "serviceLinks": [
       "Project Management",
       "Drywall Installation",
-      "Carpentry",
+      "Acoustic Treatment",
       "Plastering",
       "Metal Framing",
       "Insulation & Soundproofing",
@@ -151,7 +151,7 @@
     },
     "cta": {
       "title": "Let's talk about your project",
-      "subtitle": "Free quote · Response within 24h · Saint-Jean-sur-Richelieu",
+      "subtitle": "Free quote. Greater Montreal",
       "write": "Send us a message"
     }
   },
@@ -321,7 +321,7 @@
         },
         {
           "title": "Planning",
-          "desc": "Development of the project plan, detailed estimates and schedule."
+          "desc": "Development of the project plan and schedule."
         },
         {
           "title": "Execution",
@@ -342,7 +342,7 @@
   "projects": {
     "hero": {
       "badge": "Our portfolio",
-      "subtitle": "Over 500 projects delivered with excellence across the South Shore and Quebec."
+      "subtitle": "Multiple projects delivered with excellence across the South Shore and Quebec."
     },
     "filters": {
       "all": "All projects",
@@ -359,7 +359,7 @@
   "contact": {
     "hero": {
       "badge": "Let's work together",
-      "subtitle": "Free, no-obligation quote. Our team responds within 24 business hours."
+      "subtitle": "Free, no-obligation quote."
     },
     "cards": {
       "address": {
@@ -443,7 +443,7 @@
         },
         {
           "title": "Carpenter",
-          "desc": "Construction of wood and steel structures for all types of construction projects."
+          "desc": "Construction of steel structures for all types of construction projects."
         }
       ],
       "apply": "Apply"

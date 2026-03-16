@@ -6,7 +6,7 @@ import platre from "../assets/platre.JPG";
 import plafond from "../assets/plafond.JPG";
 import colombage from "../assets/colombage.JPG";
 import isolation from "../assets/isolation.JPG";
-import gestion from "../assets/projets.jpeg";
+import gestion from "../assets/planning.jpg";
 
 import {
   ClipboardList,
