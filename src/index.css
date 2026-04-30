@@ -2,7 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ─── Base ──────────────────────────────────────────────────── */
+/* ─── Keyframe Animations ───────────────────────────────── */
+@keyframes ticker {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scanline {
+  0%   { top: -4px; opacity: 0; }
+  4%   { opacity: 1; }
+  92%  { opacity: 0.7; }
+  100% { top: 100%; opacity: 0; }
+}
+
+@keyframes hookDrop {
+  0%, 100% { transform: translateY(0px); }
+  38%, 62% { transform: translateY(70px); }
+}
+
+@keyframes craneSwing {
+  0%, 100% { transform: rotate(0deg); }
+  50%      { transform: rotate(0.6deg); }
+}
+
+@keyframes stripe-march {
+  from { background-position: 0 0; }
+  to   { background-position: 56px 0; }
+}
+
+@keyframes weld-flash {
+  0%, 88%, 100%  { box-shadow: 0 4px 20px rgba(200,22,29,0.3); }
+  90%            { box-shadow: 0 0 30px 10px rgba(200,22,29,0.7), 0 0 60px 20px rgba(255,100,100,0.2); }
+  91%            { box-shadow: 0 4px 20px rgba(200,22,29,0.3); }
+  93%            { box-shadow: 0 0 20px 6px rgba(200,22,29,0.5); }
+  95%            { box-shadow: 0 4px 20px rgba(200,22,29,0.3); }
+}
+
+@keyframes beamReveal {
+  from { transform: scaleX(0); transform-origin: left; }
+  to   { transform: scaleX(1); transform-origin: left; }
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes countPulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.7; }
+}
+
+@keyframes diag-slide {
+  from { transform: translateX(-100%) skewX(-20deg); }
+  to   { transform: translateX(200%) skewX(-20deg); }
+}
+
+/* ─── Base ──────────────────────────────────────────────── */
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -13,59 +69,36 @@
     background: #0d0d0d;
     color: #f2f2f2;
   }
-  ::-webkit-scrollbar {
-    width: 4px;
-  }
-  ::-webkit-scrollbar-track {
-    background: #0d0d0d;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #c8161d;
-    border-radius: 2px;
-  }
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: #0d0d0d; }
+  ::-webkit-scrollbar-thumb { background: #c8161d; border-radius: 2px; }
 }
 
-/* ─── Components ────────────────────────────────────────────── */
+/* ─── Components ────────────────────────────────────────── */
 @layer components {
+
   /* Typography */
   .label {
     @apply text-[10px] font-bold tracking-[0.25em] uppercase text-bcm-red flex items-center gap-2;
     font-family: "Barlow Condensed", sans-serif;
   }
-  /* ─── Custom Utilities ────────────────────────────────────── */
+
   @layer utilities {
-    .bg-bcm-red {
-      background-color: #c8161d;
-    }
-    .bg-bcm-red-dk {
-      background-color: #9e1015;
-    }
-    .border-bcm-red {
-      border-color: #c8161d;
-    }
-    .border-bcm-red\/40 {
-      border-color: rgba(200, 22, 29, 0.4);
-    }
-    .hover\:bg-bcm-red-dk:hover {
-      background-color: #9e1015;
-    }
-    .hover\:bg-bcm-red\/10:hover {
-      background-color: rgba(200, 22, 29, 0.1);
-    }
-    .focus\:ring-bcm-red\/50:focus {
-      box-shadow: 0 0 0 2px rgba(200, 22, 29, 0.5);
-    }
-    .hover\:shadow-bcm-red\/30:hover {
-      box-shadow: 0 4px 20px 0 rgba(200, 22, 29, 0.3);
-    }
-    .text-bcm-red {
-      color: #c8161d;
-    }
+    .bg-bcm-red       { background-color: #c8161d; }
+    .bg-bcm-red-dk    { background-color: #9e1015; }
+    .border-bcm-red   { border-color: #c8161d; }
+    .border-bcm-red\/40 { border-color: rgba(200, 22, 29, 0.4); }
+    .hover\:bg-bcm-red-dk:hover { background-color: #9e1015; }
+    .hover\:bg-bcm-red\/10:hover { background-color: rgba(200, 22, 29, 0.1); }
+    .focus\:ring-bcm-red\/50:focus { box-shadow: 0 0 0 2px rgba(200, 22, 29, 0.5); }
+    .hover\:shadow-bcm-red\/30:hover { box-shadow: 0 4px 20px 0 rgba(200, 22, 29, 0.3); }
+    .text-bcm-red { color: #c8161d; }
   }
 
   .page-title {
-    @apply font-black text-5xl md:text-6xl lg:text-7xl uppercase leading-[0.9] tracking-tight text-white;
-    font-family: "Barlow Condensed", sans-serif;
+    @apply font-black text-5xl md:text-7xl lg:text-8xl uppercase leading-[0.88] text-white;
+    font-family: "Big Shoulders Display", "Barlow Condensed", sans-serif;
+    letter-spacing: -0.01em;
   }
 
   .section-heading {
@@ -73,14 +106,18 @@
     font-family: "Barlow Condensed", sans-serif;
   }
 
-  /* Buttons */
+  /* Buttons — chamfered industrial */
   .btn-red {
     @apply inline-flex items-center gap-2.5 bg-bcm-red hover:bg-bcm-red-dk text-white
            font-bold text-[11px] tracking-[0.2em] uppercase
            px-7 py-3.5 transition-all duration-200
-           hover:-translate-y-px hover:shadow-lg hover:shadow-bcm-red/30
-           focus:outline-none focus:ring-2 focus:ring-bcm-red/50;
+           hover:-translate-y-px relative overflow-hidden
+           focus:outline-none;
     font-family: "Barlow Condensed", sans-serif;
+    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+  }
+  .btn-red:hover {
+    animation: weld-flash 5s ease infinite;
   }
 
   .btn-ghost {
@@ -88,6 +125,7 @@
            text-white/70 hover:text-white font-bold text-[11px] tracking-[0.2em] uppercase
            px-7 py-3.5 transition-all duration-200;
     font-family: "Barlow Condensed", sans-serif;
+    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
   }
 
   .btn-ghost-red {
@@ -95,6 +133,7 @@
            text-bcm-silver hover:text-white font-bold text-[11px] tracking-[0.2em] uppercase
            px-7 py-3.5 transition-all duration-200 hover:bg-bcm-red/10;
     font-family: "Barlow Condensed", sans-serif;
+    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
   }
 
   /* Cards */
@@ -117,29 +156,88 @@
   }
 
   /* Utilities */
-  .red-bar {
-    @apply w-12 h-[2px] bg-bcm-red;
-  }
-  .section-pad {
-    @apply py-24 lg:py-32;
-  }
-  .container-xl {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
-  }
+  .red-bar { @apply w-12 h-[2px] bg-bcm-red; }
+  .section-pad { @apply py-24 lg:py-32; }
+  .container-xl { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
 
-  /* Page hero */
+  /* Page hero — diagonal bottom cut */
   .page-hero {
-    @apply relative pt-36 pb-20 bg-bcm-coal overflow-hidden;
+    @apply relative pt-36 overflow-hidden;
+    padding-bottom: calc(4rem + 48px);
+    background: #161616;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 48px), 0 100%);
   }
 
   .page-hero-glow {
     @apply absolute -top-40 -right-40 w-[500px] h-[500px] bg-bcm-red/10 rounded-full blur-[100px] pointer-events-none;
   }
+
+  /* ── New utility styles ─────────────────────────────────── */
+
+  /* Warning stripe — static */
+  .warning-stripe {
+    background-image: repeating-linear-gradient(
+      -45deg,
+      rgba(200, 22, 29, 0.07) 0px,
+      rgba(200, 22, 29, 0.07) 6px,
+      transparent 6px,
+      transparent 26px
+    );
+  }
+
+  /* Warning stripe — marching */
+  .warning-stripe-march {
+    background-image: repeating-linear-gradient(
+      -45deg,
+      rgba(200, 22, 29, 0.08) 0px,
+      rgba(200, 22, 29, 0.08) 6px,
+      transparent 6px,
+      transparent 28px
+    );
+    background-size: 56px 56px;
+    animation: stripe-march 2.5s linear infinite;
+  }
+
+  /* Blueprint dot grid */
+  .blueprint-dots {
+    background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+
+  /* Chamfered top-right bevel */
+  .bevel-tr {
+    clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+  }
+
+  /* Diagonal clip - bottom cut */
+  .diag-bottom {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), 0 100%);
+    padding-bottom: calc(var(--section-pb, 6rem) + 40px);
+  }
+
+  /* Diagonal clip - top cut */
+  .diag-top {
+    clip-path: polygon(0 40px, 100% 0, 100% 100%, 0 100%);
+    padding-top: calc(var(--section-pt, 6rem) + 40px);
+  }
+
+  /* Construction measurement callout */
+  .callout-box {
+    @apply relative border border-white/10 bg-transparent;
+  }
+  .callout-box::before {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border: 1px solid rgba(200, 22, 29, 0.2);
+    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+    pointer-events: none;
+  }
 }
 
-/* ─── Plain CSS (pseudo-elements + background-image) ────────── */
+/* ─── Plain CSS (pseudo-elements + animations) ───────────── */
 
-/* .label left-line — can't use @apply on ::before */
+/* .label left-line */
 .label::before {
   content: "";
   display: block;
@@ -153,9 +251,132 @@
 .page-hero-bg {
   position: absolute;
   inset: 0;
-  opacity: 0.06;
+  opacity: 0.05;
   background-image:
     linear-gradient(rgba(255, 255, 255, 1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 1) 1px, transparent 1px);
   background-size: 48px 48px;
+}
+
+/* Ticker */
+.ticker-track {
+  animation: ticker 22s linear infinite;
+  will-change: transform;
+}
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+/* Hero scan line */
+.scan-line {
+  position: absolute;
+  left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(200,22,29,0.0) 10%,
+    rgba(200,22,29,0.6) 30%,
+    rgba(255,255,255,0.5) 50%,
+    rgba(200,22,29,0.6) 70%,
+    rgba(200,22,29,0.0) 90%,
+    transparent 100%
+  );
+  box-shadow: 0 0 16px rgba(200,22,29,0.5);
+  animation: scanline 12s ease-in-out infinite;
+  z-index: 15;
+  pointer-events: none;
+}
+
+/* Crane hook drop */
+.crane-hook {
+  animation: hookDrop 9s ease-in-out infinite;
+}
+
+/* Crane body swing (very subtle) */
+.crane-body {
+  animation: craneSwing 12s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+/* Beam reveal animation */
+.beam-reveal {
+  animation: beamReveal 0.8s ease forwards;
+}
+
+/* Stagger fade-in */
+.stagger-1 { animation: fadeSlideUp 0.6s 0.0s ease both; }
+.stagger-2 { animation: fadeSlideUp 0.6s 0.1s ease both; }
+.stagger-3 { animation: fadeSlideUp 0.6s 0.2s ease both; }
+.stagger-4 { animation: fadeSlideUp 0.6s 0.3s ease both; }
+.stagger-5 { animation: fadeSlideUp 0.6s 0.4s ease both; }
+.stagger-6 { animation: fadeSlideUp 0.6s 0.5s ease both; }
+
+/* Diagonal shine sweep on btn-red */
+.btn-red::after {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 0;
+  width: 60%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.12),
+    transparent
+  );
+  transform: translateX(-100%) skewX(-20deg);
+  transition: none;
+}
+.btn-red:hover::after {
+  animation: diag-slide 0.6s ease forwards;
+}
+
+/* Structural border — top I-beam accent on hovered cards */
+.card-steel-hover {
+  position: relative;
+}
+.card-steel-hover::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #c8161d, rgba(200,22,29,0.4));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+.card-steel-hover:hover::before {
+  transform: scaleX(1);
+}
+
+/* Rivet marks on corners */
+.rivet-corners::before,
+.rivet-corners::after {
+  content: "";
+  position: absolute;
+  width: 6px; height: 6px;
+  border: 1px solid rgba(200,22,29,0.3);
+  border-radius: 50%;
+}
+.rivet-corners::before { top: 8px; left: 8px; }
+.rivet-corners::after  { bottom: 8px; right: 8px; }
+
+/* Construction ruler tick marks at section top */
+.ruler-top::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(200,22,29,0.8) 0px,
+    rgba(200,22,29,0.8) 2px,
+    transparent 2px,
+    transparent 8px,
+    rgba(200,22,29,0.4) 8px,
+    rgba(200,22,29,0.4) 9px,
+    transparent 9px,
+    transparent 24px
+  );
 }
